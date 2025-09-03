@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn HTML5 Semantic Structure Elements - header, nav, main, section, article, aside, footer">
+    <meta name="keywords" content="HTML5 semantic, structure, header, nav, main, section, article, aside, footer">
+    <meta name="author" content="HTML Education Team">
+    <title>HTML Semantic Structure - Educational Website</title>
+</head>
+<body>
+    <header>
+        <h1>🏗️ HTML Semantic Structure Elements</h1>
+        <p>Master HTML5 semantic elements for better document structure and accessibility</p>
+    </header>
+
+    <nav>
+        <h2>📚 Navigation Menu</h2>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="head.html">🧠 Head Elements</a></li>
+            <li><a href="text.html">📝 Text & Formatting</a></li>
+            <li><a href="lists.html">📋 Lists</a></li>
+            <li><a href="media.html">🔗 Links & Media</a></li>
+            <li><a href="semantic.html">🏗️ Semantic Structure</a></li>
+            <li><a href="tables.html">📊 Tables</a></li>
+            <li><a href="forms.html">📝 Forms & Inputs</a></li>
+            <li><a href="extras.html">🔧 Deprecated & Miscellaneous</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>🎯 Introduction to Semantic HTML</h2>
+            <p>Semantic HTML elements provide meaning to the structure of web content, making it more accessible to screen readers, search engines, and other tools. These HTML5 elements replace generic &lt;div&gt; elements with meaningful alternatives.</p>
+        </section>
+
+        <section>
+            <h2>📋 Document Structure Elements</h2>
+            
+            <article>
+                <h3>1. &lt;header&gt; - Page/Section Header</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;header&gt;
+    &lt;h1&gt;Website Title&lt;/h1&gt;
+    &lt;p&gt;Website tagline or description&lt;/p&gt;
+&lt;/header&gt;</code></pre>
+                <h4>Output:</h4>
+                <header style="border: 2px dashed #ccc; padding: 10px; margin: 10px 0;">
+                    <h4>Example Header</h4>
+                    <p><small>This is what a header section looks like</small></p>
+                </header>
+                <h4>Notes:</h4>
+                <p>Contains introductory content for page or section. Can include headings, logos, navigation, search forms. Multiple headers allowed per page.</p>
+            </article>
+
+            <article>
+                <h3>2. &lt;nav&gt; - Navigation Links</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                <h4>Output:</h4>
+                <nav style="border: 2px dashed #ccc; padding: 10px; margin: 10px 0;">
+                    <p><strong>Example Navigation:</strong></p>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <h4>Notes:</h4>
+                <p>For major navigation blocks. Not every link needs to be in &lt;nav&gt; - use for primary navigation, breadcrumbs, table of contents.</p>
+            </article>
+
+            <article>
+                <h3>3. &lt;main&gt; - Main Content</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;main&gt;
+    &lt;h1&gt;Page Title&lt;/h1&gt;
+    &lt;p&gt;Main content of the page goes here.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+                <h4>Output:</h4>
+                <main style="border: 2px dashed #ccc; padding: 10px; margin: 10px 0;">
+                    <h4>Example Main Content</h4>
+                    <p>This represents the primary content area of the page.</p>
+                </main>
+                <h4>Notes:</h4>
+                <p>Only one &lt;main&gt; per page. Contains the dominant content. Excludes headers, footers, navigation, sidebars that are repeated across pages.</p>
+            </article>
+
+            <article>
+                <h3>4. &lt;section&gt; - Thematic Section</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;section&gt;
+    &lt;h2&gt;Section Title&lt;/h2&gt;
+    &lt;p&gt;Content related to this section.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+                <h4>Output:</h4>
+                <section style="border: 2px dashed #ccc; padding: 10px; margin: 10px 0;">
+                    <h4>Example Section</h4>
+                    <p>This is a thematic grouping of content with its own heading.</p>
+                </section>
+                <h4>Notes:</h4>
+                <p>Groups related content with a theme. Should typically have a heading. Use when no other semantic element fits.</p>
+            </article>
+
+            <article>
+                <h3>5. &lt;article&gt; - Independent Content</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;article&gt;
+    &lt;h2&gt;Article Title&lt;/h2&gt;
+    &lt;p&gt;Self-contained content that could stand alone.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+                <h4>Output:</h4>
+                <article style="border: 2px dashed #ccc; padding: 10px; margin: 10px 0;">
+                    <h4>Example Article</h4>
+                    <p>This is independent, self-contained content like a blog post or news article.</p>
+                </article>
+                <h4>Notes:</h4>
+                <p>For standalone content: blog posts, news articles, forum posts, comments. Should make sense when distributed independently.</p>
+            </article>
+
+            <article>
+                <h3>6. &lt;aside&gt; - Sidebar Content</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;aside&gt;
+    &lt;h3&gt;Related Links&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Related Article 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Related Article 2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/aside&gt;</code></pre>
+                <h4>Output:</h4>
+                <aside style="border: 2px dashed #ccc; padding: 10px; margin: 10px 0;">
+                    <h4>Example Aside</h4>
+                    <p>This is supplementary content like a sidebar, pull quote, or advertisement.</p>
+                </aside>
+                <h4>Notes:</h4>
+                <p>For content tangentially related to main content. Sidebars, pull quotes, advertisements, author bios.</p>
+            </article>
+
+            <article>
+                <h3>7. &lt;footer&gt; - Page/Section Footer</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;footer&gt;
+    &lt;p&gt;&amp;copy; 2024 Company Name. All rights reserved.&lt;/p&gt;
+    &lt;nav&gt;
+        &lt;a href="privacy.html"&gt;Privacy&lt;/a&gt; |
+        &lt;a href="terms.html"&gt;Terms&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/footer&gt;</code></pre>
+                <h4>Output:</h4>
+                <footer style="border: 2px dashed #ccc; padding: 10px; margin: 10px 0;">
+                    <p><small>&copy; 2024 Example Company. All rights reserved.</small></p>
+                    <nav>
+                        <a href="#">Privacy</a> | <a href="#">Terms</a>
+                    </nav>
+                </footer>
+                <h4>Notes:</h4>
+                <p>Contains footer information for page or section. Copyright, contact info, related links, author info.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🔍 Interactive Elements</h2>
+            
+            <article>
+                <h3>8. &lt;details&gt; - Disclosure Widget</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;details&gt;
+    &lt;summary&gt;Click to expand&lt;/summary&gt;
+    &lt;p&gt;This content is hidden by default and shown when expanded.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+                <h4>Output:</h4>
+                <details>
+                    <summary>Click to expand</summary>
+                    <p>This content is hidden by default and shown when expanded. Perfect for FAQs, collapsible sections, or progressive disclosure.</p>
+                </details>
+                <h4>Notes:</h4>
+                <p>HTML5 interactive element. No JavaScript required. Great for FAQs, collapsible content, progressive disclosure.</p>
+            </article>
+
+            <article>
+                <h3>9. &lt;summary&gt; - Details Summary</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;summary&gt;Summary text that's always visible&lt;/summary&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>See the clickable text in the &lt;details&gt; example above.</p>
+                <h4>Notes:</h4>
+                <p>Must be first child of &lt;details&gt;. Provides the clickable summary. If omitted, browser provides default text.</p>
+            </article>
+
+            <article>
+                <h3>10. &lt;dialog&gt; - Dialog Box</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;dialog id="myDialog"&gt;
+    &lt;p&gt;This is a dialog box.&lt;/p&gt;
+    &lt;button onclick="document.getElementById('myDialog').close()"&gt;Close&lt;/button&gt;
+&lt;/dialog&gt;
+&lt;button onclick="document.getElementById('myDialog').showModal()"&gt;Open Dialog&lt;/button&gt;</code></pre>
+                <h4>Output:</h4>
+                <dialog id="myDialog">
+                    <p>This is a dialog box example.</p>
+                    <button onclick="document.getElementById('myDialog').close()">Close</button>
+                </dialog>
+                <button onclick="document.getElementById('myDialog').showModal()">Open Dialog</button>
+                <h4>Notes:</h4>
+                <p>HTML5 element for modal dialogs. Use showModal() for modal, show() for non-modal. Requires JavaScript to control.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📊 Complete Semantic Structure Example</h2>
+            
+            <article>
+                <h3>Full Page Structure</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Semantic Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Site Title&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;header&gt;
+                &lt;h2&gt;Article Title&lt;/h2&gt;
+                &lt;p&gt;Published on &lt;time datetime="2024-01-15"&gt;January 15, 2024&lt;/time&gt;&lt;/p&gt;
+            &lt;/header&gt;
+            
+            &lt;section&gt;
+                &lt;h3&gt;Introduction&lt;/h3&gt;
+                &lt;p&gt;Article introduction...&lt;/p&gt;
+            &lt;/section&gt;
+            
+            &lt;section&gt;
+                &lt;h3&gt;Main Content&lt;/h3&gt;
+                &lt;p&gt;Article main content...&lt;/p&gt;
+            &lt;/section&gt;
+            
+            &lt;footer&gt;
+                &lt;p&gt;Author: John Doe&lt;/p&gt;
+            &lt;/footer&gt;
+        &lt;/article&gt;
+    &lt;/main&gt;
+    
+    &lt;aside&gt;
+        &lt;h3&gt;Related Articles&lt;/h3&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="article1.html"&gt;Related Article 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="article2.html"&gt;Related Article 2&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/aside&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2024 Website Name. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                <h4>Output:</h4>
+                <div style="border: 2px solid #ccc; padding: 15px; margin: 10px 0;">
+                    <header style="border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">
+                        <h4>Site Title</h4>
+                        <nav>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="display: inline; margin-right: 15px;"><a href="#">Home</a></li>
+                                <li style="display: inline; margin-right: 15px;"><a href="#">About</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                    
+                    <main style="margin-bottom: 15px;">
+                        <article style="border: 1px dashed #ddd; padding: 10px; margin-bottom: 10px;">
+                            <header style="border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 10px;">
+                                <h5>Article Title</h5>
+                                <p><small>Published on <time datetime="2024-01-15">January 15, 2024</time></small></p>
+                            </header>
+                            
+                            <section style="margin-bottom: 10px;">
+                                <h6>Introduction</h6>
+                                <p><small>Article introduction content...</small></p>
+                            </section>
+                            
+                            <section style="margin-bottom: 10px;">
+                                <h6>Main Content</h6>
+                                <p><small>Article main content...</small></p>
+                            </section>
+                            
+                            <footer style="border-top: 1px solid #eee; padding-top: 5px;">
+                                <p><small>Author: John Doe</small></p>
+                            </footer>
+                        </article>
+                    </main>
+                    
+                    <aside style="border: 1px dashed #ddd; padding: 10px; margin-bottom: 10px;">
+                        <h6>Related Articles</h6>
+                        <ul>
+                            <li><a href="#">Related Article 1</a></li>
+                            <li><a href="#">Related Article 2</a></li>
+                        </ul>
+                    </aside>
+                    
+                    <footer style="border-top: 1px solid #eee; padding-top: 10px;">
+                        <p><small>&copy; 2024 Website Name. All rights reserved.</small></p>
+                    </footer>
+                </div>
+                <h4>Notes:</h4>
+                <p>This shows proper nesting and usage of semantic elements. Notice how headers and footers can be used at different levels.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🔄 Semantic vs Non-Semantic Comparison</h2>
+            
+            <article>
+                <h3>Before HTML5 (Non-Semantic)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;div id="header"&gt;
+    &lt;h1&gt;Site Title&lt;/h1&gt;
+    &lt;div id="nav"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="main"&gt;
+    &lt;div class="article"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="sidebar"&gt;...&lt;/div&gt;
+&lt;div id="footer"&gt;...&lt;/div&gt;</code></pre>
+                <h4>Notes:</h4>
+                <p>Generic &lt;div&gt; elements with IDs/classes. No semantic meaning for assistive technologies.</p>
+            </article>
+
+            <article>
+                <h3>HTML5 (Semantic)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;header&gt;
+    &lt;h1&gt;Site Title&lt;/h1&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;article&gt;...&lt;/article&gt;
+&lt;/main&gt;
+&lt;aside&gt;...&lt;/aside&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+                <h4>Notes:</h4>
+                <p>Meaningful elements that convey structure and purpose. Better for SEO, accessibility, and maintainability.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🎯 When to Use Each Element</h2>
+            
+            <article>
+                <h3>Element Selection Guide</h3>
+                <dl>
+                    <dt><strong>&lt;header&gt;</strong></dt>
+                    <dd>Page banner, article header, section introduction</dd>
+                    
+                    <dt><strong>&lt;nav&gt;</strong></dt>
+                    <dd>Primary navigation, breadcrumbs, table of contents</dd>
+                    
+                    <dt><strong>&lt;main&gt;</strong></dt>
+                    <dd>Primary content area (only one per page)</dd>
+                    
+                    <dt><strong>&lt;section&gt;</strong></dt>
+                    <dd>Thematic content grouping with heading</dd>
+                    
+                    <dt><strong>&lt;article&gt;</strong></dt>
+                    <dd>Independent, distributable content</dd>
+                    
+                    <dt><strong>&lt;aside&gt;</strong></dt>
+                    <dd>Supplementary content, sidebars, related info</dd>
+                    
+                    <dt><strong>&lt;footer&gt;</strong></dt>
+                    <dd>Page/section footer, copyright, contact info</dd>
+                    
+                    <dt><strong>&lt;details&gt;</strong></dt>
+                    <dd>Collapsible content, FAQs, progressive disclosure</dd>
+                    
+                    <dt><strong>&lt;dialog&gt;</strong></dt>
+                    <dd>Modal dialogs, popup windows, alerts</dd>
+                </dl>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <h2>💡 Semantic HTML Best Practices</h2>
+        <ul>
+            <li>Use semantic elements instead of generic &lt;div&gt; when possible</li>
+            <li>Only one &lt;main&gt; element per page</li>
+            <li>Headers and footers can be used at multiple levels</li>
+            <li>Choose &lt;article&gt; for standalone content, &lt;section&gt; for thematic grouping</li>
+            <li>Use &lt;nav&gt; for major navigation blocks, not every link</li>
+            <li>Semantic elements improve accessibility and SEO</li>
+            <li>Test with screen readers to verify semantic structure</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <hr>
+        <p><small>&copy; 2024 HTML Educational Website. Semantic Structure Section.</small></p>
+        <p><a href="media.html">← Previous: Links & Media</a> | <a href="tables.html">Next: Tables →</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn HTML List Elements - ordered, unordered, and definition lists">
+    <meta name="keywords" content="HTML lists, ul, ol, li, dl, dt, dd, menu">
+    <meta name="author" content="HTML Education Team">
+    <title>HTML Lists - Educational Website</title>
+</head>
+<body>
+    <header>
+        <h1>📋 HTML List Elements</h1>
+        <p>Master ordered, unordered, and definition lists</p>
+    </header>
+
+    <nav>
+        <h2>📚 Navigation Menu</h2>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="head.html">🧠 Head Elements</a></li>
+            <li><a href="text.html">📝 Text & Formatting</a></li>
+            <li><a href="lists.html">📋 Lists</a></li>
+            <li><a href="media.html">🔗 Links & Media</a></li>
+            <li><a href="semantic.html">🏗️ Semantic Structure</a></li>
+            <li><a href="tables.html">📊 Tables</a></li>
+            <li><a href="forms.html">📝 Forms & Inputs</a></li>
+            <li><a href="extras.html">🔧 Deprecated & Miscellaneous</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>📝 Unordered Lists</h2>
+            
+            <article>
+                <h3>1. &lt;ul&gt; - Unordered List</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <h4>Output:</h4>
+                <ul>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                </ul>
+                <h4>Notes:</h4>
+                <p>Creates bulleted lists. Order doesn't matter semantically. Can be styled with CSS list-style-type.</p>
+            </article>
+
+            <article>
+                <h3>2. &lt;li&gt; - List Item</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;li&gt;List item content&lt;/li&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>See examples above and below - each bullet point or number is a &lt;li&gt; element.</p>
+                <h4>Notes:</h4>
+                <p>Must be direct child of &lt;ul&gt;, &lt;ol&gt;, or &lt;menu&gt;. Can contain any content including other lists.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🔢 Ordered Lists</h2>
+            
+            <article>
+                <h3>3. &lt;ol&gt; - Ordered List</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;ol&gt;
+    &lt;li&gt;First step&lt;/li&gt;
+    &lt;li&gt;Second step&lt;/li&gt;
+    &lt;li&gt;Third step&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                <h4>Output:</h4>
+                <ol>
+                    <li>First step</li>
+                    <li>Second step</li>
+                    <li>Third step</li>
+                </ol>
+                <h4>Notes:</h4>
+                <p>Creates numbered lists. Order matters semantically. Perfect for instructions, rankings, or sequences.</p>
+            </article>
+
+            <article>
+                <h3>Ordered List with Custom Start</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;ol start="5"&gt;
+    &lt;li&gt;Fifth item&lt;/li&gt;
+    &lt;li&gt;Sixth item&lt;/li&gt;
+    &lt;li&gt;Seventh item&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                <h4>Output:</h4>
+                <ol start="5">
+                    <li>Fifth item</li>
+                    <li>Sixth item</li>
+                    <li>Seventh item</li>
+                </ol>
+                <h4>Notes:</h4>
+                <p>Use start attribute to begin numbering from a specific number.</p>
+            </article>
+
+            <article>
+                <h3>Ordered List with Different Types</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;ol type="A"&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type="I"&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type="a"&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol type="i"&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><strong>Uppercase letters:</strong></p>
+                <ol type="A">
+                    <li>First item</li>
+                    <li>Second item</li>
+                </ol>
+                
+                <p><strong>Uppercase Roman numerals:</strong></p>
+                <ol type="I">
+                    <li>First item</li>
+                    <li>Second item</li>
+                </ol>
+                
+                <p><strong>Lowercase letters:</strong></p>
+                <ol type="a">
+                    <li>First item</li>
+                    <li>Second item</li>
+                </ol>
+                
+                <p><strong>Lowercase Roman numerals:</strong></p>
+                <ol type="i">
+                    <li>First item</li>
+                    <li>Second item</li>
+                </ol>
+                <h4>Notes:</h4>
+                <p>Type attribute values: "1" (default), "A", "a", "I", "i". CSS list-style-type provides more options.</p>
+            </article>
+
+            <article>
+                <h3>Reversed Ordered List</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;ol reversed&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                <h4>Output:</h4>
+                <ol reversed>
+                    <li>Third item</li>
+                    <li>Second item</li>
+                    <li>First item</li>
+                </ol>
+                <h4>Notes:</h4>
+                <p>HTML5 attribute. Numbers count down instead of up. Useful for countdowns or rankings.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📖 Definition Lists</h2>
+            
+            <article>
+                <h3>4. &lt;dl&gt; - Description List</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+    
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+    
+    &lt;dt&gt;JavaScript&lt;/dt&gt;
+    &lt;dd&gt;Programming language for web interactivity&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                <h4>Output:</h4>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>HyperText Markup Language</dd>
+                    
+                    <dt>CSS</dt>
+                    <dd>Cascading Style Sheets</dd>
+                    
+                    <dt>JavaScript</dt>
+                    <dd>Programming language for web interactivity</dd>
+                </dl>
+                <h4>Notes:</h4>
+                <p>Perfect for glossaries, dictionaries, FAQs, or any term-definition pairs.</p>
+            </article>
+
+            <article>
+                <h3>5. &lt;dt&gt; - Description Term</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;dt&gt;Term to be defined&lt;/dt&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>See the bold terms in the definition list above.</p>
+                <h4>Notes:</h4>
+                <p>Must be direct child of &lt;dl&gt;. Can have multiple &lt;dd&gt; elements following it.</p>
+            </article>
+
+            <article>
+                <h3>6. &lt;dd&gt; - Description Details</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;dd&gt;Definition or description of the term&lt;/dd&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>See the indented descriptions in the definition list above.</p>
+                <h4>Notes:</h4>
+                <p>Must be direct child of &lt;dl&gt;. Multiple &lt;dd&gt; elements can follow one &lt;dt&gt;.</p>
+            </article>
+
+            <article>
+                <h3>Complex Definition List Example</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;dl&gt;
+    &lt;dt&gt;Web Browser&lt;/dt&gt;
+    &lt;dd&gt;Software application for accessing websites&lt;/dd&gt;
+    &lt;dd&gt;Examples: Chrome, Firefox, Safari, Edge&lt;/dd&gt;
+    
+    &lt;dt&gt;HTTP&lt;/dt&gt;
+    &lt;dt&gt;HTTPS&lt;/dt&gt;
+    &lt;dd&gt;Protocols for transferring web pages&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                <h4>Output:</h4>
+                <dl>
+                    <dt>Web Browser</dt>
+                    <dd>Software application for accessing websites</dd>
+                    <dd>Examples: Chrome, Firefox, Safari, Edge</dd>
+                    
+                    <dt>HTTP</dt>
+                    <dt>HTTPS</dt>
+                    <dd>Protocols for transferring web pages</dd>
+                </dl>
+                <h4>Notes:</h4>
+                <p>Multiple &lt;dd&gt; elements can follow one &lt;dt&gt;, and multiple &lt;dt&gt; elements can share one &lt;dd&gt;.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🍔 Menu Lists</h2>
+            
+            <article>
+                <h3>7. &lt;menu&gt; - Menu List</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;menu&gt;
+    &lt;li&gt;&lt;button&gt;New File&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button&gt;Open File&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;button&gt;Save File&lt;/button&gt;&lt;/li&gt;
+&lt;/menu&gt;</code></pre>
+                <h4>Output:</h4>
+                <menu>
+                    <li><button>New File</button></li>
+                    <li><button>Open File</button></li>
+                    <li><button>Save File</button></li>
+                </menu>
+                <h4>Notes:</h4>
+                <p>HTML5 element for interactive menus. Similar to &lt;ul&gt; but semantic meaning for toolbars and context menus.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🔗 Nested Lists</h2>
+            
+            <article>
+                <h3>Nested Unordered Lists</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;Fruits
+        &lt;ul&gt;
+            &lt;li&gt;Apples&lt;/li&gt;
+            &lt;li&gt;Bananas&lt;/li&gt;
+            &lt;li&gt;Oranges&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Vegetables
+        &lt;ul&gt;
+            &lt;li&gt;Carrots&lt;/li&gt;
+            &lt;li&gt;Broccoli&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <h4>Output:</h4>
+                <ul>
+                    <li>Fruits
+                        <ul>
+                            <li>Apples</li>
+                            <li>Bananas</li>
+                            <li>Oranges</li>
+                        </ul>
+                    </li>
+                    <li>Vegetables
+                        <ul>
+                            <li>Carrots</li>
+                            <li>Broccoli</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h4>Notes:</h4>
+                <p>Nested lists must be inside &lt;li&gt; elements, not directly inside parent list.</p>
+            </article>
+
+            <article>
+                <h3>Nested Ordered Lists</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;ol&gt;
+    &lt;li&gt;Prepare ingredients
+        &lt;ol type="a"&gt;
+            &lt;li&gt;Wash vegetables&lt;/li&gt;
+            &lt;li&gt;Chop onions&lt;/li&gt;
+            &lt;li&gt;Measure spices&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Cook the dish
+        &lt;ol type="a"&gt;
+            &lt;li&gt;Heat oil in pan&lt;/li&gt;
+            &lt;li&gt;Add ingredients&lt;/li&gt;
+            &lt;li&gt;Simmer for 20 minutes&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Serve and enjoy&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                <h4>Output:</h4>
+                <ol>
+                    <li>Prepare ingredients
+                        <ol type="a">
+                            <li>Wash vegetables</li>
+                            <li>Chop onions</li>
+                            <li>Measure spices</li>
+                        </ol>
+                    </li>
+                    <li>Cook the dish
+                        <ol type="a">
+                            <li>Heat oil in pan</li>
+                            <li>Add ingredients</li>
+                            <li>Simmer for 20 minutes</li>
+                        </ol>
+                    </li>
+                    <li>Serve and enjoy</li>
+                </ol>
+                <h4>Notes:</h4>
+                <p>Great for hierarchical instructions. Different numbering types help distinguish levels.</p>
+            </article>
+
+            <article>
+                <h3>Mixed List Types</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;ol&gt;
+    &lt;li&gt;Programming Languages
+        &lt;ul&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+            &lt;li&gt;Python&lt;/li&gt;
+            &lt;li&gt;Java&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Frameworks
+        &lt;ul&gt;
+            &lt;li&gt;React&lt;/li&gt;
+            &lt;li&gt;Vue.js&lt;/li&gt;
+            &lt;li&gt;Angular&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                <h4>Output:</h4>
+                <ol>
+                    <li>Programming Languages
+                        <ul>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                        </ul>
+                    </li>
+                    <li>Frameworks
+                        <ul>
+                            <li>React</li>
+                            <li>Vue.js</li>
+                            <li>Angular</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h4>Notes:</h4>
+                <p>You can mix ordered and unordered lists. Choose based on whether order matters at each level.</p>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <h2>💡 List Best Practices</h2>
+        <ul>
+            <li>Use &lt;ul&gt; when order doesn't matter</li>
+            <li>Use &lt;ol&gt; for sequential steps or rankings</li>
+            <li>Use &lt;dl&gt; for term-definition pairs</li>
+            <li>Nest lists inside &lt;li&gt; elements, not directly in parent lists</li>
+            <li>Consider semantic meaning when choosing list types</li>
+            <li>Use CSS for visual styling instead of deprecated attributes</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <hr>
+        <p><small>&copy; 2024 HTML Educational Website. Lists Section.</small></p>
+        <p><a href="text.html">← Previous: Text & Formatting</a> | <a href="media.html">Next: Links & Media →</a></p>
+    </footer>
+</body>
+</html>

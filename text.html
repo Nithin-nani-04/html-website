@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn HTML Text and Formatting Tags - headings, paragraphs, emphasis, and inline formatting">
+    <meta name="keywords" content="HTML text, formatting, headings, paragraphs, bold, italic, emphasis">
+    <meta name="author" content="HTML Education Team">
+    <title>HTML Text & Formatting Tags - Educational Website</title>
+</head>
+<body>
+    <header>
+        <h1>📝 HTML Text & Formatting Tags</h1>
+        <p>Master text structure and inline formatting elements</p>
+    </header>
+
+    <nav>
+        <h2>📚 Navigation Menu</h2>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="head.html">🧠 Head Elements</a></li>
+            <li><a href="text.html">📝 Text & Formatting</a></li>
+            <li><a href="lists.html">📋 Lists</a></li>
+            <li><a href="media.html">🔗 Links & Media</a></li>
+            <li><a href="semantic.html">🏗️ Semantic Structure</a></li>
+            <li><a href="tables.html">📊 Tables</a></li>
+            <li><a href="forms.html">📝 Forms & Inputs</a></li>
+            <li><a href="extras.html">🔧 Deprecated & Miscellaneous</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>📋 Heading Elements</h2>
+            
+            <article>
+                <h3>1. &lt;h1&gt; to &lt;h6&gt; - Headings</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Section Heading&lt;/h2&gt;
+&lt;h3&gt;Subsection Heading&lt;/h3&gt;
+&lt;h4&gt;Sub-subsection Heading&lt;/h4&gt;
+&lt;h5&gt;Minor Heading&lt;/h5&gt;
+&lt;h6&gt;Smallest Heading&lt;/h6&gt;</code></pre>
+                <h4>Output:</h4>
+                <h1>Main Heading (h1)</h1>
+                <h2>Section Heading (h2)</h2>
+                <h3>Subsection Heading (h3)</h3>
+                <h4>Sub-subsection Heading (h4)</h4>
+                <h5>Minor Heading (h5)</h5>
+                <h6>Smallest Heading (h6)</h6>
+                <h4>Notes:</h4>
+                <p>Use hierarchically (h1 → h2 → h3). Only one h1 per page for SEO. Screen readers use these for navigation.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📄 Paragraph and Line Elements</h2>
+            
+            <article>
+                <h3>2. &lt;p&gt; - Paragraph</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>This is a paragraph of text.</p>
+                <h4>Notes:</h4>
+                <p>Block-level element. Browsers add margin above and below paragraphs automatically.</p>
+            </article>
+
+            <article>
+                <h3>3. &lt;br&gt; - Line Break</h3>
+                <h4>Syntax:</h4>
+                <pre><code>First line&lt;br&gt;
+Second line&lt;br&gt;
+Third line</code></pre>
+                <h4>Output:</h4>
+                <p>First line<br>
+                Second line<br>
+                Third line</p>
+                <h4>Notes:</h4>
+                <p>Self-closing tag. Use sparingly - prefer paragraphs for text blocks.</p>
+            </article>
+
+            <article>
+                <h3>4. &lt;hr&gt; - Horizontal Rule</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;hr&gt;</code></pre>
+                <h4>Output:</h4>
+                <hr>
+                <h4>Notes:</h4>
+                <p>Self-closing tag. Represents thematic break or section divider.</p>
+            </article>
+
+            <article>
+                <h3>5. &lt;wbr&gt; - Word Break Opportunity</h3>
+                <h4>Syntax:</h4>
+                <pre><code>supercalifragilisticexpiali&lt;wbr&gt;docious</code></pre>
+                <h4>Output:</h4>
+                <p>supercalifragilisticexpiali<wbr>docious</p>
+                <h4>Notes:</h4>
+                <p>Suggests where browser can break long words if needed. Invisible unless line wrapping occurs.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>💪 Emphasis and Importance</h2>
+            
+            <article>
+                <h3>6. &lt;strong&gt; - Strong Importance</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;strong&gt;This is very important!&lt;/strong&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><strong>This is very important!</strong></p>
+                <h4>Notes:</h4>
+                <p>Semantic emphasis. Screen readers announce with strong emphasis.</p>
+            </article>
+
+            <article>
+                <h3>7. &lt;em&gt; - Emphasis</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;em&gt;This is emphasized text&lt;/em&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><em>This is emphasized text</em></p>
+                <h4>Notes:</h4>
+                <p>Semantic emphasis. Different from &lt;i&gt; - this has meaning, &lt;i&gt; is just styling.</p>
+            </article>
+
+            <article>
+                <h3>8. &lt;b&gt; - Bold Text</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;b&gt;This is bold text&lt;/b&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><b>This is bold text</b></p>
+                <h4>Notes:</h4>
+                <p>Stylistic bold without semantic meaning. Use &lt;strong&gt; for importance.</p>
+            </article>
+
+            <article>
+                <h3>9. &lt;i&gt; - Italic Text</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;i&gt;This is italic text&lt;/i&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><i>This is italic text</i></p>
+                <h4>Notes:</h4>
+                <p>Stylistic italic without semantic meaning. Use &lt;em&gt; for emphasis.</p>
+            </article>
+
+            <article>
+                <h3>10. &lt;u&gt; - Underlined Text</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;u&gt;This is underlined text&lt;/u&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><u>This is underlined text</u></p>
+                <h4>Notes:</h4>
+                <p>Avoid using - users expect underlined text to be links.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🔤 Text Modifications</h2>
+            
+            <article>
+                <h3>11. &lt;mark&gt; - Highlighted Text</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;mark&gt;highlighted text&lt;/mark&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>This is <mark>highlighted text</mark> in a sentence.</p>
+                <h4>Notes:</h4>
+                <p>HTML5 element. Represents text marked for reference or notation.</p>
+            </article>
+
+            <article>
+                <h3>12. &lt;small&gt; - Small Text</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;small&gt;This is small text&lt;/small&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><small>This is small text</small></p>
+                <h4>Notes:</h4>
+                <p>Represents side comments, legal text, or fine print.</p>
+            </article>
+
+            <article>
+                <h3>13. &lt;big&gt; - Big Text (Deprecated)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;big&gt;This is big text&lt;/big&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><big>This is big text</big></p>
+                <h4>Notes:</h4>
+                <p>Deprecated in HTML5. Use CSS font-size instead.</p>
+            </article>
+
+            <article>
+                <h3>14. &lt;del&gt; - Deleted Text</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;del&gt;This text was deleted&lt;/del&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><del>This text was deleted</del></p>
+                <h4>Notes:</h4>
+                <p>Represents removed content. Can include datetime and cite attributes.</p>
+            </article>
+
+            <article>
+                <h3>15. &lt;ins&gt; - Inserted Text</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;ins&gt;This text was inserted&lt;/ins&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><ins>This text was inserted</ins></p>
+                <h4>Notes:</h4>
+                <p>Represents added content. Often used with &lt;del&gt; to show changes.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🔢 Subscript and Superscript</h2>
+            
+            <article>
+                <h3>16. &lt;sub&gt; - Subscript</h3>
+                <h4>Syntax:</h4>
+                <pre><code>H&lt;sub&gt;2&lt;/sub&gt;O</code></pre>
+                <h4>Output:</h4>
+                <p>H<sub>2</sub>O (water molecule)</p>
+                <h4>Notes:</h4>
+                <p>Perfect for chemical formulas and mathematical expressions.</p>
+            </article>
+
+            <article>
+                <h3>17. &lt;sup&gt; - Superscript</h3>
+                <h4>Syntax:</h4>
+                <pre><code>E = mc&lt;sup&gt;2&lt;/sup&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>E = mc<sup>2</sup> (Einstein's equation)</p>
+                <h4>Notes:</h4>
+                <p>Great for exponents, ordinal numbers (1<sup>st</sup>, 2<sup>nd</sup>), and footnotes.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📖 Quotations and Citations</h2>
+            
+            <article>
+                <h3>18. &lt;q&gt; - Inline Quote</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;q&gt;To be or not to be&lt;/q&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>Shakespeare wrote <q>To be or not to be</q> in Hamlet.</p>
+                <h4>Notes:</h4>
+                <p>Browsers automatically add quotation marks. Use cite attribute for source URL.</p>
+            </article>
+
+            <article>
+                <h3>19. &lt;blockquote&gt; - Block Quote</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;blockquote cite="https://example.com"&gt;
+    This is a longer quotation that stands alone.
+&lt;/blockquote&gt;</code></pre>
+                <h4>Output:</h4>
+                <blockquote cite="https://example.com">
+                    This is a longer quotation that stands alone as its own paragraph or section.
+                </blockquote>
+                <h4>Notes:</h4>
+                <p>Block-level element for longer quotes. Use cite attribute for source URL.</p>
+            </article>
+
+            <article>
+                <h3>20. &lt;cite&gt; - Citation</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;cite&gt;The Great Gatsby&lt;/cite&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>My favorite book is <cite>The Great Gatsby</cite> by F. Scott Fitzgerald.</p>
+                <h4>Notes:</h4>
+                <p>For titles of works (books, movies, songs). Not for author names.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>💻 Code and Technical Text</h2>
+            
+            <article>
+                <h3>21. &lt;code&gt; - Inline Code</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;code&gt;console.log("Hello");&lt;/code&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>Use <code>console.log("Hello");</code> to print to console.</p>
+                <h4>Notes:</h4>
+                <p>For short code snippets within text. Use monospace font.</p>
+            </article>
+
+            <article>
+                <h3>22. &lt;pre&gt; - Preformatted Text</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;pre&gt;
+function hello() {
+    console.log("Hello World!");
+}
+&lt;/pre&gt;</code></pre>
+                <h4>Output:</h4>
+                <pre>
+function hello() {
+    console.log("Hello World!");
+}
+</pre>
+                <h4>Notes:</h4>
+                <p>Preserves whitespace and line breaks. Perfect for code blocks and ASCII art.</p>
+            </article>
+
+            <article>
+                <h3>23. &lt;kbd&gt; - Keyboard Input</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;kbd&gt;Ctrl+C&lt;/kbd&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>Press <kbd>Ctrl+C</kbd> to copy text.</p>
+                <h4>Notes:</h4>
+                <p>Represents user input from keyboard, voice, or other input device.</p>
+            </article>
+
+            <article>
+                <h3>24. &lt;samp&gt; - Sample Output</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;samp&gt;Hello World!&lt;/samp&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>The program outputs: <samp>Hello World!</samp></p>
+                <h4>Notes:</h4>
+                <p>Represents sample output from programs or computing systems.</p>
+            </article>
+
+            <article>
+                <h3>25. &lt;var&gt; - Variable</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;var&gt;x&lt;/var&gt; = 5</code></pre>
+                <h4>Output:</h4>
+                <p>In the equation <var>x</var> + <var>y</var> = 10, if <var>x</var> = 5, then <var>y</var> = 5.</p>
+                <h4>Notes:</h4>
+                <p>Represents variables in mathematical expressions or programming contexts.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📅 Time and Abbreviations</h2>
+            
+            <article>
+                <h3>26. &lt;time&gt; - Time Element</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;time datetime="2024-01-15"&gt;January 15, 2024&lt;/time&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>The event is on <time datetime="2024-01-15">January 15, 2024</time>.</p>
+                <h4>Notes:</h4>
+                <p>Machine-readable time format in datetime attribute. Helps search engines and assistive technology.</p>
+            </article>
+
+            <article>
+                <h3>27. &lt;abbr&gt; - Abbreviation</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><abbr title="HyperText Markup Language">HTML</abbr> is the standard markup language.</p>
+                <h4>Notes:</h4>
+                <p>Hover over the abbreviation to see the full form. Title attribute provides expansion.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📍 Address Information</h2>
+            
+            <article>
+                <h3>28. &lt;address&gt; - Contact Information</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;address&gt;
+    123 Main Street&lt;br&gt;
+    City, State 12345&lt;br&gt;
+    &lt;a href="mailto:contact@example.com"&gt;contact@example.com&lt;/a&gt;
+&lt;/address&gt;</code></pre>
+                <h4>Output:</h4>
+                <address>
+                    123 Main Street<br>
+                    City, State 12345<br>
+                    <a href="mailto:contact@example.com">contact@example.com</a>
+                </address>
+                <h4>Notes:</h4>
+                <p>For contact information of the document or article author. Not for postal addresses in general.</p>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <h2>💡 Text Formatting Best Practices</h2>
+        <ul>
+            <li>Use semantic tags (&lt;strong&gt;, &lt;em&gt;) over presentational ones (&lt;b&gt;, &lt;i&gt;)</li>
+            <li>Maintain proper heading hierarchy (h1 → h2 → h3)</li>
+            <li>Use &lt;code&gt; for inline code, &lt;pre&gt; for code blocks</li>
+            <li>Provide meaningful abbreviation expansions with title attribute</li>
+            <li>Use &lt;time&gt; with datetime for machine-readable dates</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <hr>
+        <p><small>&copy; 2024 HTML Educational Website. Text & Formatting Section.</small></p>
+        <p><a href="head.html">← Previous: Head Elements</a> | <a href="lists.html">Next: Lists →</a></p>
+    </footer>
+</body>
+</html>

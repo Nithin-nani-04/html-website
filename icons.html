@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn HTML Icons, Favicons, and Icon Libraries - Font Awesome, Material Icons, and more">
+    <meta name="keywords" content="HTML icons, favicons, Font Awesome, Material Icons, SVG icons">
+    <meta name="author" content="HTML Education Team">
+    <title>HTML Icons & Favicons - Educational Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzQyODVGNCIvPgo8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5IPC90ZXh0Pgo8L3N2Zz4K">
+</head>
+<body>
+    <header class="main-header">
+        <h1>🎨 HTML Icons & Favicons</h1>
+        <p>Master icons, favicons, and popular icon libraries</p>
+    </header>
+
+    <nav class="main-nav">
+        <h2>📚 Navigation Menu</h2>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="head.html">🧠 Head Elements</a></li>
+            <li><a href="text.html">📝 Text & Formatting</a></li>
+            <li><a href="lists.html">📋 Lists</a></li>
+            <li><a href="media.html">🔗 Links & Media</a></li>
+            <li><a href="semantic.html">🏗️ Semantic Structure</a></li>
+            <li><a href="tables.html">📊 Tables</a></li>
+            <li><a href="forms.html">📝 Forms & Inputs</a></li>
+            <li><a href="icons.html" class="active">🎨 Icons & Favicons</a></li>
+            <li><a href="extras.html">🔧 Deprecated & Miscellaneous</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="content-section">
+            <h2>🔖 Favicons</h2>
+            
+            <article class="element-card">
+                <h3>1. Basic Favicon</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;link rel="icon" type="image/x-icon" href="/favicon.ico"&gt;
+&lt;link rel="shortcut icon" href="/favicon.ico"&gt;</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <p>Check the browser tab - you should see a blue "H" icon!</p>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>Traditional .ico format. Place in root directory. Shows in browser tabs, bookmarks, and history.</p>
+                </div>
+            </article>
+
+            <article class="element-card">
+                <h3>2. Modern Favicon with Multiple Sizes</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"&gt;
+&lt;link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"&gt;
+&lt;link rel="manifest" href="/site.webmanifest"&gt;</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <p>Multiple sizes ensure crisp display on all devices and contexts.</p>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>PNG format with multiple sizes. Apple touch icon for iOS. Web manifest for PWA support.</p>
+                </div>
+            </article>
+
+            <article class="element-card">
+                <h3>3. SVG Favicon</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;link rel="icon" type="image/svg+xml" href="/favicon.svg"&gt;</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <p>Scalable vector favicon that adapts to any size perfectly.</p>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>Modern browsers support SVG favicons. Scalable and can adapt to dark/light themes.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="content-section">
+            <h2>🎯 Font Awesome Icons</h2>
+            
+            <article class="element-card">
+                <h3>4. Font Awesome Setup</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <p>Include this in your &lt;head&gt; to use Font Awesome icons.</p>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>Popular icon library with 1000+ icons. Free and Pro versions available.</p>
+                </div>
+            </article>
+
+            <article class="element-card">
+                <h3>5. Basic Font Awesome Icons</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;i class="fas fa-home"&gt;&lt;/i&gt; Home
+&lt;i class="fas fa-user"&gt;&lt;/i&gt; User
+&lt;i class="fas fa-envelope"&gt;&lt;/i&gt; Email
+&lt;i class="fas fa-phone"&gt;&lt;/i&gt; Phone</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <div class="icon-examples">
+                        <p><i class="fas fa-home"></i> Home</p>
+                        <p><i class="fas fa-user"></i> User</p>
+                        <p><i class="fas fa-envelope"></i> Email</p>
+                        <p><i class="fas fa-phone"></i> Phone</p>
+                    </div>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>fas = Font Awesome Solid. Also available: far (regular), fab (brands), fal (light - Pro only).</p>
+                </div>
+            </article>
+
+            <article class="element-card">
+                <h3>6. Font Awesome Icon Sizes</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;i class="fas fa-star fa-xs"&gt;&lt;/i&gt; Extra Small
+&lt;i class="fas fa-star fa-sm"&gt;&lt;/i&gt; Small
+&lt;i class="fas fa-star"&gt;&lt;/i&gt; Normal
+&lt;i class="fas fa-star fa-lg"&gt;&lt;/i&gt; Large
+&lt;i class="fas fa-star fa-2x"&gt;&lt;/i&gt; 2x
+&lt;i class="fas fa-star fa-3x"&gt;&lt;/i&gt; 3x</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <div class="icon-sizes">
+                        <p><i class="fas fa-star fa-xs"></i> Extra Small</p>
+                        <p><i class="fas fa-star fa-sm"></i> Small</p>
+                        <p><i class="fas fa-star"></i> Normal</p>
+                        <p><i class="fas fa-star fa-lg"></i> Large</p>
+                        <p><i class="fas fa-star fa-2x"></i> 2x</p>
+                        <p><i class="fas fa-star fa-3x"></i> 3x</p>
+                    </div>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>Size classes: fa-xs, fa-sm, fa-lg, fa-2x through fa-10x for scaling.</p>
+                </div>
+            </article>
+
+            <article class="element-card">
+                <h3>7. Font Awesome Animations</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;i class="fas fa-spinner fa-spin"&gt;&lt;/i&gt; Spinning
+&lt;i class="fas fa-circle-notch fa-spin"&gt;&lt;/i&gt; Loading
+&lt;i class="fas fa-sync-alt fa-spin"&gt;&lt;/i&gt; Refresh
+&lt;i class="fas fa-heart fa-beat"&gt;&lt;/i&gt; Beating</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <div class="icon-animations">
+                        <p><i class="fas fa-spinner fa-spin"></i> Spinning</p>
+                        <p><i class="fas fa-circle-notch fa-spin"></i> Loading</p>
+                        <p><i class="fas fa-sync-alt fa-spin"></i> Refresh</p>
+                        <p><i class="fas fa-heart fa-beat"></i> Beating</p>
+                    </div>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>Animation classes: fa-spin, fa-pulse, fa-beat, fa-fade, fa-beat-fade, fa-bounce, fa-shake.</p>
+                </div>
+            </article>
+
+            <article class="element-card">
+                <h3>8. Font Awesome Brand Icons</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;i class="fab fa-facebook"&gt;&lt;/i&gt; Facebook
+&lt;i class="fab fa-twitter"&gt;&lt;/i&gt; Twitter
+&lt;i class="fab fa-instagram"&gt;&lt;/i&gt; Instagram
+&lt;i class="fab fa-github"&gt;&lt;/i&gt; GitHub
+&lt;i class="fab fa-linkedin"&gt;&lt;/i&gt; LinkedIn</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <div class="brand-icons">
+                        <p><i class="fab fa-facebook"></i> Facebook</p>
+                        <p><i class="fab fa-twitter"></i> Twitter</p>
+                        <p><i class="fab fa-instagram"></i> Instagram</p>
+                        <p><i class="fab fa-github"></i> GitHub</p>
+                        <p><i class="fab fa-linkedin"></i> LinkedIn</p>
+                    </div>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>fab = Font Awesome Brands. Includes logos for popular social media and tech companies.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="content-section">
+            <h2>🎨 Material Icons</h2>
+            
+            <article class="element-card">
+                <h3>9. Material Icons Setup</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <p>Include this in your &lt;head&gt; to use Google Material Icons.</p>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>Google's Material Design icon set. Clean, modern icons following Material Design principles.</p>
+                </div>
+            </article>
+
+            <article class="element-card">
+                <h3>10. Basic Material Icons</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;span class="material-icons"&gt;home&lt;/span&gt; Home
+&lt;span class="material-icons"&gt;person&lt;/span&gt; Person
+&lt;span class="material-icons"&gt;email&lt;/span&gt; Email
+&lt;span class="material-icons"&gt;phone&lt;/span&gt; Phone
+&lt;span class="material-icons"&gt;favorite&lt;/span&gt; Favorite</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <div class="material-icons-examples">
+                        <p><span class="material-icons">home</span> Home</p>
+                        <p><span class="material-icons">person</span> Person</p>
+                        <p><span class="material-icons">email</span> Email</p>
+                        <p><span class="material-icons">phone</span> Phone</p>
+                        <p><span class="material-icons">favorite</span> Favorite</p>
+                    </div>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>Use icon names as text content. Icons are font-based and can be styled with CSS.</p>
+                </div>
+            </article>
+
+            <article class="element-card">
+                <h3>11. Material Icons Variants</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;span class="material-icons"&gt;star&lt;/span&gt; Filled
+&lt;span class="material-icons-outlined"&gt;star&lt;/span&gt; Outlined
+&lt;span class="material-icons-round"&gt;star&lt;/span&gt; Round
+&lt;span class="material-icons-sharp"&gt;star&lt;/span&gt; Sharp
+&lt;span class="material-icons-two-tone"&gt;star&lt;/span&gt; Two Tone</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <div class="material-variants">
+                        <p><span class="material-icons">star</span> Filled</p>
+                        <p><span class="material-icons-outlined">star</span> Outlined</p>
+                        <p><span class="material-icons-round">star</span> Round</p>
+                        <p><span class="material-icons-sharp">star</span> Sharp</p>
+                        <p><span class="material-icons-two-tone">star</span> Two Tone</p>
+                    </div>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>Five style variants available. Each requires separate font import for optimal loading.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="content-section">
+            <h2>🖼️ SVG Icons</h2>
+            
+            <article class="element-card">
+                <h3>12. Inline SVG Icons</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"&gt;
+    &lt;path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/&gt;
+&lt;/svg&gt;</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <div class="svg-icons">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span>Custom SVG Star</span>
+                    </div>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>Scalable vector graphics. Use currentColor to inherit text color. Fully customizable.</p>
+                </div>
+            </article>
+
+            <article class="element-card">
+                <h3>13. SVG Icon with CSS Styling</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;svg class="icon icon-heart" viewBox="0 0 24 24"&gt;
+    &lt;path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/&gt;
+&lt;/svg&gt;
+
+&lt;style&gt;
+.icon-heart {
+    width: 24px;
+    height: 24px;
+    fill: #e74c3c;
+    transition: transform 0.2s;
+}
+.icon-heart:hover {
+    transform: scale(1.2);
+    fill: #c0392b;
+}
+&lt;/style&gt;</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <div class="styled-svg">
+                        <svg class="icon-heart" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <span>Hover over the heart!</span>
+                    </div>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>SVG icons can be styled with CSS. Use fill for color, transform for animations.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="content-section">
+            <h2>🎪 Icon Usage Examples</h2>
+            
+            <article class="element-card">
+                <h3>14. Navigation with Icons</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;nav class="icon-nav"&gt;
+    &lt;a href="#"&gt;&lt;i class="fas fa-home"&gt;&lt;/i&gt; Home&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;i class="fas fa-user"&gt;&lt;/i&gt; Profile&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;i class="fas fa-cog"&gt;&lt;/i&gt; Settings&lt;/a&gt;
+    &lt;a href="#"&gt;&lt;i class="fas fa-sign-out-alt"&gt;&lt;/i&gt; Logout&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <nav class="icon-nav">
+                        <a href="#"><i class="fas fa-home"></i> Home</a>
+                        <a href="#"><i class="fas fa-user"></i> Profile</a>
+                        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </nav>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>Icons enhance navigation by providing visual cues. Improve user experience and accessibility.</p>
+                </div>
+            </article>
+
+            <article class="element-card">
+                <h3>15. Buttons with Icons</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;button class="btn btn-primary"&gt;
+    &lt;i class="fas fa-download"&gt;&lt;/i&gt; Download
+&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;
+    &lt;i class="fas fa-check"&gt;&lt;/i&gt; Save
+&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;
+    &lt;i class="fas fa-trash"&gt;&lt;/i&gt; Delete
+&lt;/button&gt;</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <div class="icon-buttons">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download
+                        </button>
+                        <button class="btn btn-success">
+                            <i class="fas fa-check"></i> Save
+                        </button>
+                        <button class="btn btn-danger">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </div>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>Icons in buttons provide immediate visual context for actions. Combine with text for clarity.</p>
+                </div>
+            </article>
+
+            <article class="element-card">
+                <h3>16. Social Media Icons</h3>
+                <div class="syntax-block">
+                    <h4>Syntax:</h4>
+                    <pre><code>&lt;div class="social-icons"&gt;
+    &lt;a href="#" class="social-icon facebook"&gt;
+        &lt;i class="fab fa-facebook-f"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href="#" class="social-icon twitter"&gt;
+        &lt;i class="fab fa-twitter"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href="#" class="social-icon instagram"&gt;
+        &lt;i class="fab fa-instagram"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href="#" class="social-icon linkedin"&gt;
+        &lt;i class="fab fa-linkedin-in"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="output-block">
+                    <h4>Output:</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="notes-block">
+                    <h4>Notes:</h4>
+                    <p>Social media icons are commonly used in footers and contact sections. Use brand colors for recognition.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <aside class="sidebar">
+        <h2>💡 Icon Best Practices</h2>
+        <ul>
+            <li>Use icons consistently throughout your site</li>
+            <li>Ensure icons are accessible with proper alt text or aria-labels</li>
+            <li>Choose icon libraries that match your design style</li>
+            <li>Optimize icon loading for better performance</li>
+            <li>Use SVG icons for scalability and customization</li>
+            <li>Test icons across different devices and screen sizes</li>
+            <li>Consider icon meaning across different cultures</li>
+            <li>Provide text labels alongside icons when possible</li>
+        </ul>
+    </aside>
+
+    <footer class="main-footer">
+        <hr>
+        <p><small>&copy; 2024 HTML Educational Website. Icons & Favicons Section.</small></p>
+        <p><a href="forms.html">← Previous: Forms & Inputs</a> | <a href="extras.html">Next: Deprecated & Miscellaneous →</a></p>
+    </footer>
+
+    <style>
+        .icon-heart {
+            width: 24px;
+            height: 24px;
+            fill: #e74c3c;
+            transition: transform 0.2s, fill 0.2s;
+            cursor: pointer;
+        }
+        .icon-heart:hover {
+            transform: scale(1.2);
+            fill: #c0392b;
+        }
+    </style>
+</body>
+</html>

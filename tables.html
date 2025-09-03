@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn HTML Table Elements - table structure, headers, cells, captions, and grouping">
+    <meta name="keywords" content="HTML tables, table, tr, td, th, thead, tbody, tfoot, caption">
+    <meta name="author" content="HTML Education Team">
+    <title>HTML Tables - Educational Website</title>
+</head>
+<body>
+    <header>
+        <h1>📊 HTML Table Elements</h1>
+        <p>Master table structure, headers, cells, and advanced table features</p>
+    </header>
+
+    <nav>
+        <h2>📚 Navigation Menu</h2>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="head.html">🧠 Head Elements</a></li>
+            <li><a href="text.html">📝 Text & Formatting</a></li>
+            <li><a href="lists.html">📋 Lists</a></li>
+            <li><a href="media.html">🔗 Links & Media</a></li>
+            <li><a href="semantic.html">🏗️ Semantic Structure</a></li>
+            <li><a href="tables.html">📊 Tables</a></li>
+            <li><a href="forms.html">📝 Forms & Inputs</a></li>
+            <li><a href="extras.html">🔧 Deprecated & Miscellaneous</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>📋 Basic Table Elements</h2>
+            
+            <article>
+                <h3>1. &lt;table&gt; - Table Container</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Cell 1&lt;/td&gt;
+        &lt;td&gt;Cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                <h4>Output:</h4>
+                <table border="1">
+                    <tr>
+                        <td>Cell 1</td>
+                        <td>Cell 2</td>
+                    </tr>
+                </table>
+                <h4>Notes:</h4>
+                <p>Container for all table content. Use only for tabular data, not for layout. Border attribute is deprecated - use CSS instead.</p>
+            </article>
+
+            <article>
+                <h3>2. &lt;tr&gt; - Table Row</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;tr&gt;
+    &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+    &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+                <h4>Output:</h4>
+                <table border="1">
+                    <tr>
+                        <td>Row 1, Cell 1</td>
+                        <td>Row 1, Cell 2</td>
+                    </tr>
+                </table>
+                <h4>Notes:</h4>
+                <p>Defines a table row. Contains table cells (&lt;td&gt; or &lt;th&gt;). Must be direct child of &lt;table&gt;, &lt;thead&gt;, &lt;tbody&gt;, or &lt;tfoot&gt;.</p>
+            </article>
+
+            <article>
+                <h3>3. &lt;td&gt; - Table Data Cell</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;td&gt;Cell content&lt;/td&gt;</code></pre>
+                <h4>Output:</h4>
+                <table border="1">
+                    <tr>
+                        <td>Regular data cell</td>
+                        <td>Another data cell</td>
+                    </tr>
+                </table>
+                <h4>Notes:</h4>
+                <p>Contains table data. Can contain any HTML content. Use for regular table cells.</p>
+            </article>
+
+            <article>
+                <h3>4. &lt;th&gt; - Table Header Cell</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;tr&gt;
+    &lt;th&gt;Header 1&lt;/th&gt;
+    &lt;th&gt;Header 2&lt;/th&gt;
+&lt;/tr&gt;</code></pre>
+                <h4>Output:</h4>
+                <table border="1">
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                    </tr>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                    </tr>
+                </table>
+                <h4>Notes:</h4>
+                <p>Header cells are bold and centered by default. Important for accessibility - screen readers use these to understand table structure.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📝 Table Caption and Structure</h2>
+            
+            <article>
+                <h3>5. &lt;caption&gt; - Table Caption</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;table&gt;
+    &lt;caption&gt;Monthly Sales Report&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Month&lt;/th&gt;
+        &lt;th&gt;Sales&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;January&lt;/td&gt;
+        &lt;td&gt;$10,000&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                <h4>Output:</h4>
+                <table border="1">
+                    <caption>Monthly Sales Report</caption>
+                    <tr>
+                        <th>Month</th>
+                        <th>Sales</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$10,000</td>
+                    </tr>
+                </table>
+                <h4>Notes:</h4>
+                <p>Must be first child of &lt;table&gt;. Provides title/description for the table. Important for accessibility.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🏗️ Table Grouping Elements</h2>
+            
+            <article>
+                <h3>6. &lt;thead&gt; - Table Header Group</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Product&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+            &lt;th&gt;Stock&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Laptop&lt;/td&gt;
+            &lt;td&gt;$999&lt;/td&gt;
+            &lt;td&gt;15&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                <h4>Output:</h4>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Laptop</td>
+                            <td>$999</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>Mouse</td>
+                            <td>$25</td>
+                            <td>50</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Notes:</h4>
+                <p>Groups header content. Helps with styling and accessibility. Can be styled separately from body content.</p>
+            </article>
+
+            <article>
+                <h3>7. &lt;tbody&gt; - Table Body Group</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Data row 1&lt;/td&gt;
+        &lt;td&gt;Data row 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Data row 2&lt;/td&gt;
+        &lt;td&gt;Data row 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/tbody&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>See the data rows in the table above.</p>
+                <h4>Notes:</h4>
+                <p>Groups main table content. Can have multiple &lt;tbody&gt; elements for different sections of data.</p>
+            </article>
+
+            <article>
+                <h3>8. &lt;tfoot&gt; - Table Footer Group</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Item&lt;/th&gt;
+            &lt;th&gt;Quantity&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Apples&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;$2.50&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Bananas&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;$1.50&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Total&lt;/th&gt;
+            &lt;th&gt;8&lt;/th&gt;
+            &lt;th&gt;$4.00&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                <h4>Output:</h4>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apples</td>
+                            <td>5</td>
+                            <td>$2.50</td>
+                        </tr>
+                        <tr>
+                            <td>Bananas</td>
+                            <td>3</td>
+                            <td>$1.50</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <th>8</th>
+                            <th>$4.00</th>
+                        </tr>
+                    </tfoot>
+                </table>
+                <h4>Notes:</h4>
+                <p>Groups footer content like totals or summaries. Appears at bottom of table regardless of position in HTML.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📐 Column Elements</h2>
+            
+            <article>
+                <h3>9. &lt;colgroup&gt; - Column Group</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;table&gt;
+    &lt;colgroup&gt;
+        &lt;col style="background-color: #f0f0f0;"&gt;
+        &lt;col span="2" style="background-color: #e0e0e0;"&gt;
+    &lt;/colgroup&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+        &lt;th&gt;City&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;John&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+        &lt;td&gt;New York&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                <h4>Output:</h4>
+                <table border="1">
+                    <colgroup>
+                        <col style="background-color: #f0f0f0;">
+                        <col span="2" style="background-color: #e0e0e0;">
+                    </colgroup>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>25</td>
+                        <td>New York</td>
+                    </tr>
+                </table>
+                <h4>Notes:</h4>
+                <p>Groups columns for styling. Must appear after &lt;caption&gt; and before table content. Contains &lt;col&gt; elements.</p>
+            </article>
+
+            <article>
+                <h3>10. &lt;col&gt; - Column</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;col span="2" style="background-color: yellow;"&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>See the styled columns in the &lt;colgroup&gt; example above.</p>
+                <h4>Notes:</h4>
+                <p>Self-closing tag. Defines properties for one or more columns. span attribute specifies number of columns.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🔗 Cell Spanning and Attributes</h2>
+            
+            <article>
+                <h3>Colspan - Spanning Columns</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th colspan="3"&gt;Quarterly Report&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Q1&lt;/th&gt;
+        &lt;th&gt;Q2&lt;/th&gt;
+        &lt;th&gt;Q3&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;$100K&lt;/td&gt;
+        &lt;td&gt;$120K&lt;/td&gt;
+        &lt;td&gt;$110K&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                <h4>Output:</h4>
+                <table border="1">
+                    <tr>
+                        <th colspan="3">Quarterly Report</th>
+                    </tr>
+                    <tr>
+                        <th>Q1</th>
+                        <th>Q2</th>
+                        <th>Q3</th>
+                    </tr>
+                    <tr>
+                        <td>$100K</td>
+                        <td>$120K</td>
+                        <td>$110K</td>
+                    </tr>
+                </table>
+                <h4>Notes:</h4>
+                <p>colspan makes a cell span multiple columns. Useful for headers that cover multiple data columns.</p>
+            </article>
+
+            <article>
+                <h3>Rowspan - Spanning Rows</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Department&lt;/th&gt;
+        &lt;th&gt;Employee&lt;/th&gt;
+        &lt;th&gt;Salary&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;Engineering&lt;/td&gt;
+        &lt;td&gt;Alice&lt;/td&gt;
+        &lt;td&gt;$80K&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Bob&lt;/td&gt;
+        &lt;td&gt;$75K&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="2"&gt;Marketing&lt;/td&gt;
+        &lt;td&gt;Carol&lt;/td&gt;
+        &lt;td&gt;$65K&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Dave&lt;/td&gt;
+        &lt;td&gt;$60K&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                <h4>Output:</h4>
+                <table border="1">
+                    <tr>
+                        <th>Department</th>
+                        <th>Employee</th>
+                        <th>Salary</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Engineering</td>
+                        <td>Alice</td>
+                        <td>$80K</td>
+                    </tr>
+                    <tr>
+                        <td>Bob</td>
+                        <td>$75K</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Marketing</td>
+                        <td>Carol</td>
+                        <td>$65K</td>
+                    </tr>
+                    <tr>
+                        <td>Dave</td>
+                        <td>$60K</td>
+                    </tr>
+                </table>
+                <h4>Notes:</h4>
+                <p>rowspan makes a cell span multiple rows. Useful for grouping related data vertically.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>♿ Accessibility Attributes</h2>
+            
+            <article>
+                <h3>Headers Attribute</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th id="name"&gt;Name&lt;/th&gt;
+        &lt;th id="age"&gt;Age&lt;/th&gt;
+        &lt;th id="city"&gt;City&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td headers="name"&gt;John Doe&lt;/td&gt;
+        &lt;td headers="age"&gt;30&lt;/td&gt;
+        &lt;td headers="city"&gt;Boston&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                <h4>Output:</h4>
+                <table border="1">
+                    <tr>
+                        <th id="name">Name</th>
+                        <th id="age">Age</th>
+                        <th id="city">City</th>
+                    </tr>
+                    <tr>
+                        <td headers="name">John Doe</td>
+                        <td headers="age">30</td>
+                        <td headers="city">Boston</td>
+                    </tr>
+                </table>
+                <h4>Notes:</h4>
+                <p>headers attribute explicitly associates data cells with header cells. Important for complex tables and screen readers.</p>
+            </article>
+
+            <article>
+                <h3>Scope Attribute</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th scope="col"&gt;Product&lt;/th&gt;
+        &lt;th scope="col"&gt;Q1&lt;/th&gt;
+        &lt;th scope="col"&gt;Q2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope="row"&gt;Laptops&lt;/th&gt;
+        &lt;td&gt;100&lt;/td&gt;
+        &lt;td&gt;120&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th scope="row"&gt;Phones&lt;/th&gt;
+        &lt;td&gt;200&lt;/td&gt;
+        &lt;td&gt;180&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                <h4>Output:</h4>
+                <table border="1">
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Q1</th>
+                        <th scope="col">Q2</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Laptops</th>
+                        <td>100</td>
+                        <td>120</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Phones</th>
+                        <td>200</td>
+                        <td>180</td>
+                    </tr>
+                </table>
+                <h4>Notes:</h4>
+                <p>scope attribute specifies whether header applies to row, column, rowgroup, or colgroup. Values: row, col, rowgroup, colgroup.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📊 Complex Table Example</h2>
+            
+            <article>
+                <h3>Complete Table with All Features</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;table&gt;
+    &lt;caption&gt;Company Sales Data 2024&lt;/caption&gt;
+    &lt;colgroup&gt;
+        &lt;col style="background-color: #f9f9f9;"&gt;
+        &lt;col span="4" style="background-color: #fff;"&gt;
+    &lt;/colgroup&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Region&lt;/th&gt;
+            &lt;th scope="col"&gt;Q1&lt;/th&gt;
+            &lt;th scope="col"&gt;Q2&lt;/th&gt;
+            &lt;th scope="col"&gt;Q3&lt;/th&gt;
+            &lt;th scope="col"&gt;Q4&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;North&lt;/th&gt;
+            &lt;td&gt;$150K&lt;/td&gt;
+            &lt;td&gt;$180K&lt;/td&gt;
+            &lt;td&gt;$200K&lt;/td&gt;
+            &lt;td&gt;$220K&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;South&lt;/th&gt;
+            &lt;td&gt;$120K&lt;/td&gt;
+            &lt;td&gt;$140K&lt;/td&gt;
+            &lt;td&gt;$160K&lt;/td&gt;
+            &lt;td&gt;$180K&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;East&lt;/th&gt;
+            &lt;td&gt;$100K&lt;/td&gt;
+            &lt;td&gt;$110K&lt;/td&gt;
+            &lt;td&gt;$130K&lt;/td&gt;
+            &lt;td&gt;$140K&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;West&lt;/th&gt;
+            &lt;td&gt;$200K&lt;/td&gt;
+            &lt;td&gt;$250K&lt;/td&gt;
+            &lt;td&gt;$280K&lt;/td&gt;
+            &lt;td&gt;$300K&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Total&lt;/th&gt;
+            &lt;td&gt;&lt;strong&gt;$570K&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;$680K&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;$770K&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;$840K&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                <h4>Output:</h4>
+                <table border="1">
+                    <caption>Company Sales Data 2024</caption>
+                    <colgroup>
+                        <col style="background-color: #f9f9f9;">
+                        <col span="4" style="background-color: #fff;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">Region</th>
+                            <th scope="col">Q1</th>
+                            <th scope="col">Q2</th>
+                            <th scope="col">Q3</th>
+                            <th scope="col">Q4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">North</th>
+                            <td>$150K</td>
+                            <td>$180K</td>
+                            <td>$200K</td>
+                            <td>$220K</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">South</th>
+                            <td>$120K</td>
+                            <td>$140K</td>
+                            <td>$160K</td>
+                            <td>$180K</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">East</th>
+                            <td>$100K</td>
+                            <td>$110K</td>
+                            <td>$130K</td>
+                            <td>$140K</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">West</th>
+                            <td>$200K</td>
+                            <td>$250K</td>
+                            <td>$280K</td>
+                            <td>$300K</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row">Total</th>
+                            <td><strong>$570K</strong></td>
+                            <td><strong>$680K</strong></td>
+                            <td><strong>$770K</strong></td>
+                            <td><strong>$840K</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <h4>Notes:</h4>
+                <p>This example demonstrates proper table structure with caption, column grouping, semantic sections, and accessibility attributes.</p>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <h2>💡 Table Best Practices</h2>
+        <ul>
+            <li>Use tables only for tabular data, not for layout</li>
+            <li>Always include table headers (&lt;th&gt;) for accessibility</li>
+            <li>Use &lt;caption&gt; to describe the table's purpose</li>
+            <li>Group related content with &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</li>
+            <li>Use scope attribute on headers for better accessibility</li>
+            <li>Consider responsive design for mobile devices</li>
+            <li>Use CSS for styling instead of deprecated HTML attributes</li>
+            <li>Test with screen readers to ensure accessibility</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <hr>
+        <p><small>&copy; 2024 HTML Educational Website. Tables Section.</small></p>
+        <p><a href="semantic.html">← Previous: Semantic Structure</a> | <a href="forms.html">Next: Forms & Inputs →</a></p>
+    </footer>
+</body>
+</html>

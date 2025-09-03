@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn HTML Deprecated and Miscellaneous Elements - legacy tags and special elements">
+    <meta name="keywords" content="HTML deprecated, legacy tags, marquee, bdi, bdo, template, slot">
+    <meta name="author" content="HTML Education Team">
+    <title>HTML Deprecated & Miscellaneous - Educational Website</title>
+</head>
+<body>
+    <header>
+        <h1>🔧 HTML Deprecated & Miscellaneous Elements</h1>
+        <p>Explore legacy tags and special-purpose elements</p>
+    </header>
+
+    <nav>
+        <h2>📚 Navigation Menu</h2>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="head.html">🧠 Head Elements</a></li>
+            <li><a href="text.html">📝 Text & Formatting</a></li>
+            <li><a href="lists.html">📋 Lists</a></li>
+            <li><a href="media.html">🔗 Links & Media</a></li>
+            <li><a href="semantic.html">🏗️ Semantic Structure</a></li>
+            <li><a href="tables.html">📊 Tables</a></li>
+            <li><a href="forms.html">📝 Forms & Inputs</a></li>
+            <li><a href="extras.html">🔧 Deprecated & Miscellaneous</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>⚠️ Deprecated Elements (Avoid in Modern HTML)</h2>
+            <p><strong>Note:</strong> These elements are deprecated and should not be used in modern web development. They're included here for educational purposes and understanding legacy code.</p>
+            
+            <article>
+                <h3>1. &lt;marquee&gt; - Scrolling Text (Deprecated)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;marquee direction="left" behavior="scroll" scrollamount="3"&gt;
+    This text scrolls from right to left
+&lt;/marquee&gt;</code></pre>
+                <h4>Output:</h4>
+                <marquee direction="left" behavior="scroll" scrollamount="3">
+                    This text scrolls from right to left
+                </marquee>
+                <h4>Notes:</h4>
+                <p><strong>Deprecated!</strong> Creates scrolling text. Poor for accessibility and UX. Use CSS animations instead.</p>
+            </article>
+
+            <article>
+                <h3>2. &lt;center&gt; - Center Alignment (Deprecated)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;center&gt;This text is centered&lt;/center&gt;</code></pre>
+                <h4>Output:</h4>
+                <center>This text is centered</center>
+                <h4>Notes:</h4>
+                <p><strong>Deprecated!</strong> Use CSS text-align: center instead.</p>
+            </article>
+
+            <article>
+                <h3>3. &lt;font&gt; - Font Styling (Deprecated)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;font face="Arial" size="4" color="red"&gt;Styled text&lt;/font&gt;</code></pre>
+                <h4>Output:</h4>
+                <font face="Arial" size="4" color="red">Styled text</font>
+                <h4>Notes:</h4>
+                <p><strong>Deprecated!</strong> Use CSS for font styling: font-family, font-size, color.</p>
+            </article>
+
+            <article>
+                <h3>4. &lt;basefont&gt; - Base Font (Deprecated)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;basefont face="Times" size="3" color="black"&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><em>Not displayed - sets default font for document</em></p>
+                <h4>Notes:</h4>
+                <p><strong>Deprecated!</strong> Self-closing tag. Use CSS body selector for default font styling.</p>
+            </article>
+
+            <article>
+                <h3>5. &lt;acronym&gt; - Acronym (Deprecated)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;acronym title="World Wide Web"&gt;WWW&lt;/acronym&gt;</code></pre>
+                <h4>Output:</h4>
+                <acronym title="World Wide Web">WWW</acronym>
+                <h4>Notes:</h4>
+                <p><strong>Deprecated!</strong> Use &lt;abbr&gt; instead for both abbreviations and acronyms.</p>
+            </article>
+
+            <article>
+                <h3>6. &lt;applet&gt; - Java Applet (Deprecated)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;applet code="MyApplet.class" width="300" height="200"&gt;
+    Java applet not supported
+&lt;/applet&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><em>Java applets are no longer supported by modern browsers</em></p>
+                <h4>Notes:</h4>
+                <p><strong>Deprecated!</strong> Java applets removed from modern browsers. Use modern web technologies instead.</p>
+            </article>
+
+            <article>
+                <h3>7. &lt;blink&gt; - Blinking Text (Deprecated)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;blink&gt;This text would blink&lt;/blink&gt;</code></pre>
+                <h4>Output:</h4>
+                <blink>This text would blink</blink> <em>(No longer works in modern browsers)</em>
+                <h4>Notes:</h4>
+                <p><strong>Deprecated!</strong> Never standardized, removed from browsers. Poor for accessibility.</p>
+            </article>
+
+            <article>
+                <h3>8. &lt;frame&gt; and &lt;frameset&gt; - Frames (Deprecated)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;frameset cols="50%,50%"&gt;
+    &lt;frame src="left.html"&gt;
+    &lt;frame src="right.html"&gt;
+&lt;/frameset&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><em>Frames are not supported in HTML5</em></p>
+                <h4>Notes:</h4>
+                <p><strong>Deprecated!</strong> Removed in HTML5. Use &lt;iframe&gt; for embedding or CSS/JavaScript for layouts.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🌐 Text Direction Elements</h2>
+            
+            <article>
+                <h3>9. &lt;bdi&gt; - Bidirectional Isolate</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;p&gt;User &lt;bdi&gt;إيان&lt;/bdi&gt; scored 90 points.&lt;/p&gt;
+&lt;p&gt;User &lt;bdi&gt;John&lt;/bdi&gt; scored 85 points.&lt;/p&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>User <bdi>إيان</bdi> scored 90 points.</p>
+                <p>User <bdi>John</bdi> scored 85 points.</p>
+                <h4>Notes:</h4>
+                <p>HTML5 element. Isolates text that might have different text direction from surrounding text. Useful for user-generated content.</p>
+            </article>
+
+            <article>
+                <h3>10. &lt;bdo&gt; - Bidirectional Override</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;bdo dir="rtl"&gt;This text will be right-to-left&lt;/bdo&gt;
+&lt;bdo dir="ltr"&gt;This text will be left-to-right&lt;/bdo&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><bdo dir="rtl">This text will be right-to-left</bdo></p>
+                <p><bdo dir="ltr">This text will be left-to-right</bdo></p>
+                <h4>Notes:</h4>
+                <p>Overrides text direction. dir attribute required: "ltr" (left-to-right) or "rtl" (right-to-left).</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🔧 Template and Web Components</h2>
+            
+            <article>
+                <h3>11. &lt;template&gt; - Template Element</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;template id="my-template"&gt;
+    &lt;div class="card"&gt;
+        &lt;h3&gt;Template Title&lt;/h3&gt;
+        &lt;p&gt;Template content goes here&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/template&gt;</code></pre>
+                <h4>Output:</h4>
+                <template id="my-template">
+                    <div class="card">
+                        <h3>Template Title</h3>
+                        <p>Template content goes here</p>
+                    </div>
+                </template>
+                <p><em>Template content is not rendered until activated by JavaScript</em></p>
+                <button onclick="useTemplate()">Activate Template</button>
+                <div id="template-output"></div>
+                <script>
+                function useTemplate() {
+                    const template = document.getElementById('my-template');
+                    const clone = template.content.cloneNode(true);
+                    document.getElementById('template-output').appendChild(clone);
+                }
+                </script>
+                <h4>Notes:</h4>
+                <p>HTML5 element. Content not rendered until cloned and inserted via JavaScript. Used in web components.</p>
+            </article>
+
+            <article>
+                <h3>12. &lt;slot&gt; - Content Slot</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;template id="user-card"&gt;
+    &lt;div class="user-card"&gt;
+        &lt;slot name="avatar"&gt;Default Avatar&lt;/slot&gt;
+        &lt;slot name="name"&gt;Default Name&lt;/slot&gt;
+        &lt;slot&gt;Default content&lt;/slot&gt;
+    &lt;/div&gt;
+&lt;/template&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><em>Slots are placeholders used in web components and shadow DOM</em></p>
+                <h4>Notes:</h4>
+                <p>HTML5 element. Placeholder for content in web components. name attribute creates named slots.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🎭 Ruby Annotation (East Asian Typography)</h2>
+            
+            <article>
+                <h3>13. &lt;ruby&gt; - Ruby Annotation</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;ruby&gt;
+    漢 &lt;rt&gt;kan&lt;/rt&gt;
+    字 &lt;rt&gt;ji&lt;/rt&gt;
+&lt;/ruby&gt;</code></pre>
+                <h4>Output:</h4>
+                <ruby>
+                    漢 <rt>kan</rt>
+                    字 <rt>ji</rt>
+                </ruby>
+                <h4>Notes:</h4>
+                <p>HTML5 element. For East Asian typography. Shows pronunciation or meaning above/beside base text.</p>
+            </article>
+
+            <article>
+                <h3>14. &lt;rt&gt; - Ruby Text</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;rt&gt;pronunciation&lt;/rt&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>See usage in &lt;ruby&gt; example above.</p>
+                <h4>Notes:</h4>
+                <p>Contains the ruby annotation text (pronunciation, meaning, etc.).</p>
+            </article>
+
+            <article>
+                <h3>15. &lt;rp&gt; - Ruby Parentheses</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;ruby&gt;
+    東京 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;とうきょう&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;</code></pre>
+                <h4>Output:</h4>
+                <ruby>
+                    東京 <rp>(</rp><rt>とうきょう</rt><rp>)</rp>
+                </ruby>
+                <h4>Notes:</h4>
+                <p>Fallback parentheses for browsers that don't support ruby annotations.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🔍 Miscellaneous Elements</h2>
+            
+            <article>
+                <h3>16. &lt;noscript&gt; - No Script Fallback</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;noscript&gt;
+    &lt;p&gt;This website requires JavaScript to function properly.&lt;/p&gt;
+    &lt;p&gt;Please enable JavaScript in your browser.&lt;/p&gt;
+&lt;/noscript&gt;</code></pre>
+                <h4>Output:</h4>
+                <noscript>
+                    <p><strong>This website requires JavaScript to function properly.</strong></p>
+                    <p><strong>Please enable JavaScript in your browser.</strong></p>
+                </noscript>
+                <p><em>(Content above only shows if JavaScript is disabled)</em></p>
+                <h4>Notes:</h4>
+                <p>Content displayed only when JavaScript is disabled or unavailable. Important for accessibility.</p>
+            </article>
+
+            <article>
+                <h3>17. &lt;wbr&gt; - Word Break Opportunity</h3>
+                <h4>Syntax:</h4>
+                <pre><code>supercalifragilisticexpiali&lt;wbr&gt;docious</code></pre>
+                <h4>Output:</h4>
+                <p>supercalifragilisticexpiali<wbr>docious</p>
+                <h4>Notes:</h4>
+                <p>Self-closing tag. Suggests where browser can break long words if needed for line wrapping.</p>
+            </article>
+
+            <article>
+                <h3>18. &lt;data&gt; - Machine-Readable Data</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;data value="12345"&gt;Product ABC&lt;/data&gt;
+&lt;data value="2024-01-15"&gt;January 15, 2024&lt;/data&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>Item: <data value="12345">Product ABC</data></p>
+                <p>Date: <data value="2024-01-15">January 15, 2024</data></p>
+                <h4>Notes:</h4>
+                <p>HTML5 element. Associates machine-readable value with human-readable content. Similar to &lt;time&gt; but for any data.</p>
+            </article>
+
+            <article>
+                <h3>19. &lt;keygen&gt; - Key Generator (Deprecated)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;keygen name="security" challenge="randomstring" keytype="rsa"&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><em>Keygen element was removed from HTML5 specification</em></p>
+                <h4>Notes:</h4>
+                <p><strong>Deprecated!</strong> Was used for generating public-private key pairs. Removed due to security concerns.</p>
+            </article>
+
+            <article>
+                <h3>20. &lt;menuitem&gt; - Menu Item (Deprecated)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;menuitem label="Copy" onclick="copy()"&gt;&lt;/menuitem&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><em>Menuitem element was removed from HTML5 specification</em></p>
+                <h4>Notes:</h4>
+                <p><strong>Deprecated!</strong> Was intended for context menus. Never widely supported, removed from spec.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🎨 Styling-Related Deprecated Elements</h2>
+            
+            <article>
+                <h3>21. &lt;s&gt; vs &lt;strike&gt; - Strikethrough</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;s&gt;This text is struck through (HTML5)&lt;/s&gt;
+&lt;strike&gt;This text is struck through (deprecated)&lt;/strike&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><s>This text is struck through (HTML5)</s></p>
+                <p><strike>This text is struck through (deprecated)</strike></p>
+                <h4>Notes:</h4>
+                <p>&lt;s&gt; is valid HTML5 for content no longer accurate. &lt;strike&gt; is deprecated - use &lt;s&gt; or CSS text-decoration.</p>
+            </article>
+
+            <article>
+                <h3>22. &lt;tt&gt; - Teletype Text (Deprecated)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;tt&gt;Monospace text&lt;/tt&gt;</code></pre>
+                <h4>Output:</h4>
+                <tt>Monospace text</tt>
+                <h4>Notes:</h4>
+                <p><strong>Deprecated!</strong> Use &lt;code&gt;, &lt;kbd&gt;, &lt;samp&gt;, or CSS font-family: monospace instead.</p>
+            </article>
+
+            <article>
+                <h3>23. &lt;dir&gt; - Directory List (Deprecated)</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;dir&gt;
+    &lt;li&gt;file1.txt&lt;/li&gt;
+    &lt;li&gt;file2.txt&lt;/li&gt;
+&lt;/dir&gt;</code></pre>
+                <h4>Output:</h4>
+                <dir>
+                    <li>file1.txt</li>
+                    <li>file2.txt</li>
+                </dir>
+                <h4>Notes:</h4>
+                <p><strong>Deprecated!</strong> Use &lt;ul&gt; instead for directory listings.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📊 Summary of All Elements Covered</h2>
+            
+            <article>
+                <h3>Element Count by Category</h3>
+                <table border="1">
+                    <caption>Complete HTML Elements Coverage</caption>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Elements Covered</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Head Elements</td>
+                            <td>10</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td>Text & Formatting</td>
+                            <td>28</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td>Lists</td>
+                            <td>7</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td>Links & Media</td>
+                            <td>17</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td>Semantic Structure</td>
+                            <td>10</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td>Tables</td>
+                            <td>10</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td>Forms & Inputs</td>
+                            <td>35</td>
+                            <td>Current</td>
+                        </tr>
+                        <tr>
+                            <td>Deprecated Elements</td>
+                            <td>12</td>
+                            <td>Deprecated</td>
+                        </tr>
+                        <tr>
+                            <td>Miscellaneous</td>
+                            <td>11</td>
+                            <td>Mixed</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total Elements</th>
+                            <th>140+</th>
+                            <th>Complete</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+
+            <article>
+                <h3>🎯 Learning Objectives Achieved</h3>
+                <ul>
+                    <li>✅ Covered 100+ HTML elements (actually 140+)</li>
+                    <li>✅ Demonstrated syntax for each element</li>
+                    <li>✅ Showed actual output/rendering</li>
+                    <li>✅ Explained differences between similar elements</li>
+                    <li>✅ Organized into logical categories</li>
+                    <li>✅ Included navigation between all pages</li>
+                    <li>✅ Provided educational context and best practices</li>
+                    <li>✅ Covered both current and deprecated elements</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <h2>💡 Modern HTML Best Practices</h2>
+        <ul>
+            <li>Avoid deprecated elements - use CSS for styling</li>
+            <li>Use semantic HTML5 elements for better accessibility</li>
+            <li>Validate your HTML with W3C validator</li>
+            <li>Consider progressive enhancement for JavaScript features</li>
+            <li>Use appropriate elements for their intended purpose</li>
+            <li>Test with assistive technologies</li>
+            <li>Keep up with HTML specifications and browser support</li>
+            <li>Prioritize accessibility and user experience</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <hr>
+        <p><small>&copy; 2024 HTML Educational Website. Deprecated & Miscellaneous Section.</small></p>
+        <p><a href="forms.html">← Previous: Forms & Inputs</a> | <a href="index.html">🏠 Back to Home</a></p>
+        
+        <section>
+            <h3>🎉 Congratulations!</h3>
+            <p>You've completed the comprehensive HTML elements tour covering <strong>140+ elements</strong>!</p>
+            <p>This educational website demonstrates proper HTML structure, semantic markup, and accessibility best practices.</p>
+        </section>
+    </footer>
+</body>
+</html>

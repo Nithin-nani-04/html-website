@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn HTML Forms and Input Elements - all input types, form controls, and validation">
+    <meta name="keywords" content="HTML forms, input types, form validation, fieldset, legend, label">
+    <meta name="author" content="HTML Education Team">
+    <title>HTML Forms & Inputs - Educational Website</title>
+</head>
+<body>
+    <header>
+        <h1>📝 HTML Forms & Input Elements</h1>
+        <p>Master all form elements, input types, and form validation</p>
+    </header>
+
+    <nav>
+        <h2>📚 Navigation Menu</h2>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="head.html">🧠 Head Elements</a></li>
+            <li><a href="text.html">📝 Text & Formatting</a></li>
+            <li><a href="lists.html">📋 Lists</a></li>
+            <li><a href="media.html">🔗 Links & Media</a></li>
+            <li><a href="semantic.html">🏗️ Semantic Structure</a></li>
+            <li><a href="tables.html">📊 Tables</a></li>
+            <li><a href="forms.html">📝 Forms & Inputs</a></li>
+            <li><a href="extras.html">🔧 Deprecated & Miscellaneous</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>📋 Form Container</h2>
+            
+            <article>
+                <h3>1. &lt;form&gt; - Form Container</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;form action="/submit" method="post" enctype="multipart/form-data"&gt;
+    &lt;!-- Form elements go here --&gt;
+&lt;/form&gt;</code></pre>
+                <h4>Output:</h4>
+                <form style="border: 2px dashed #ccc; padding: 15px; margin: 10px 0;">
+                    <p><em>This is a form container (other examples will show actual form elements)</em></p>
+                </form>
+                <h4>Notes:</h4>
+                <p>Container for all form elements. action: where to send data. method: GET or POST. enctype: encoding type for file uploads.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🏷️ Labels and Basic Structure</h2>
+            
+            <article>
+                <h3>2. &lt;label&gt; - Input Label</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input type="text" id="username" name="username"&gt;
+
+&lt;!-- Alternative: wrapping label --&gt;
+&lt;label&gt;
+    Email:
+    &lt;input type="email" name="email"&gt;
+&lt;/label&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <p>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username">
+                    </p>
+                    <p>
+                        <label>
+                            Email:
+                            <input type="email" name="email">
+                        </label>
+                    </p>
+                </form>
+                <h4>Notes:</h4>
+                <p>Associates text with form controls. Clicking label focuses the input. Use for attribute or wrap the input.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📝 Text Input Types</h2>
+            
+            <article>
+                <h3>3. &lt;input type="text"&gt; - Text Input</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="text" name="firstname" placeholder="Enter your first name" maxlength="50"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="text" name="firstname" placeholder="Enter your first name" maxlength="50">
+                </form>
+                <h4>Notes:</h4>
+                <p>Default input type. Single-line text. Use placeholder for hints, maxlength to limit characters.</p>
+            </article>
+
+            <article>
+                <h3>4. &lt;input type="password"&gt; - Password Input</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="password" name="password" placeholder="Enter password" minlength="8"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="password" name="password" placeholder="Enter password" minlength="8">
+                </form>
+                <h4>Notes:</h4>
+                <p>Masks input characters. Use minlength for minimum password length requirements.</p>
+            </article>
+
+            <article>
+                <h3>5. &lt;input type="email"&gt; - Email Input</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="email" name="email" placeholder="user@example.com" required&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="email" name="email" placeholder="user@example.com" required>
+                </form>
+                <h4>Notes:</h4>
+                <p>HTML5 input with email validation. Browsers check for valid email format. Mobile keyboards show @ symbol.</p>
+            </article>
+
+            <article>
+                <h3>6. &lt;input type="url"&gt; - URL Input</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="url" name="website" placeholder="https://example.com"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="url" name="website" placeholder="https://example.com">
+                </form>
+                <h4>Notes:</h4>
+                <p>HTML5 input for URLs. Validates URL format. Mobile keyboards show .com key.</p>
+            </article>
+
+            <article>
+                <h3>7. &lt;input type="tel"&gt; - Telephone Input</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="tel" name="phone" placeholder="+1 (555) 123-4567" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="tel" name="phone" placeholder="+1 (555) 123-4567" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                </form>
+                <h4>Notes:</h4>
+                <p>For phone numbers. Mobile devices show numeric keypad. Use pattern attribute for format validation.</p>
+            </article>
+
+            <article>
+                <h3>8. &lt;input type="search"&gt; - Search Input</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="search" name="query" placeholder="Search..." autocomplete="off"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="search" name="query" placeholder="Search..." autocomplete="off">
+                </form>
+                <h4>Notes:</h4>
+                <p>Semantic search input. May show clear button (X) when text is entered. Rounded corners on some browsers.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🔢 Numeric Input Types</h2>
+            
+            <article>
+                <h3>9. &lt;input type="number"&gt; - Number Input</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="number" name="age" min="0" max="120" step="1" value="25"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="number" name="age" min="0" max="120" step="1" value="25">
+                </form>
+                <h4>Notes:</h4>
+                <p>Numeric input with spinner controls. min/max set range, step sets increment, value sets default.</p>
+            </article>
+
+            <article>
+                <h3>10. &lt;input type="range"&gt; - Range Slider</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="range" name="volume" min="0" max="100" value="50" step="10"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <label for="volume">Volume: </label>
+                    <input type="range" id="volume" name="volume" min="0" max="100" value="50" step="10">
+                    <output for="volume">50</output>
+                </form>
+                <h4>Notes:</h4>
+                <p>Slider control for selecting values within a range. Great for settings like volume, brightness, etc.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📅 Date and Time Inputs</h2>
+            
+            <article>
+                <h3>11. &lt;input type="date"&gt; - Date Input</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="date" name="birthday" min="1900-01-01" max="2024-12-31"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="date" name="birthday" min="1900-01-01" max="2024-12-31">
+                </form>
+                <h4>Notes:</h4>
+                <p>HTML5 date picker. Format: YYYY-MM-DD. Browsers provide calendar widget.</p>
+            </article>
+
+            <article>
+                <h3>12. &lt;input type="time"&gt; - Time Input</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="time" name="appointment" min="09:00" max="17:00" step="900"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="time" name="appointment" min="09:00" max="17:00" step="900">
+                </form>
+                <h4>Notes:</h4>
+                <p>Time picker in 24-hour format. step in seconds (900 = 15 minutes). Format: HH:MM or HH:MM:SS.</p>
+            </article>
+
+            <article>
+                <h3>13. &lt;input type="datetime-local"&gt; - Local DateTime</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="datetime-local" name="meeting" value="2024-01-15T14:30"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="datetime-local" name="meeting" value="2024-01-15T14:30">
+                </form>
+                <h4>Notes:</h4>
+                <p>Date and time without timezone. Format: YYYY-MM-DDTHH:MM. Combines date and time pickers.</p>
+            </article>
+
+            <article>
+                <h3>14. &lt;input type="month"&gt; - Month Input</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="month" name="start-month" value="2024-01"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="month" name="start-month" value="2024-01">
+                </form>
+                <h4>Notes:</h4>
+                <p>Month and year picker. Format: YYYY-MM. Useful for credit card expiry, reports, etc.</p>
+            </article>
+
+            <article>
+                <h3>15. &lt;input type="week"&gt; - Week Input</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="week" name="project-week" value="2024-W03"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="week" name="project-week" value="2024-W03">
+                </form>
+                <h4>Notes:</h4>
+                <p>Week picker. Format: YYYY-WNN (W03 = 3rd week). Useful for scheduling and planning.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🎨 Visual Input Types</h2>
+            
+            <article>
+                <h3>16. &lt;input type="color"&gt; - Color Picker</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="color" name="theme-color" value="#ff0000"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="color" name="theme-color" value="#ff0000">
+                </form>
+                <h4>Notes:</h4>
+                <p>Color picker widget. Returns hex color value (#RRGGBB). Browsers provide color palette interface.</p>
+            </article>
+
+            <article>
+                <h3>17. &lt;input type="file"&gt; - File Upload</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="file" name="upload" accept=".jpg,.png,.pdf" multiple&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="file" name="upload" accept=".jpg,.png,.pdf" multiple>
+                </form>
+                <h4>Notes:</h4>
+                <p>File selection. accept limits file types, multiple allows multiple files. Form needs enctype="multipart/form-data".</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>☑️ Choice Input Types</h2>
+            
+            <article>
+                <h3>18. &lt;input type="checkbox"&gt; - Checkbox</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="checkbox" id="newsletter" name="newsletter" value="yes" checked&gt;
+&lt;label for="newsletter"&gt;Subscribe to newsletter&lt;/label&gt;
+
+&lt;input type="checkbox" id="terms" name="terms" value="accepted" required&gt;
+&lt;label for="terms"&gt;I agree to the terms&lt;/label&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <p>
+                        <input type="checkbox" id="newsletter" name="newsletter" value="yes" checked>
+                        <label for="newsletter">Subscribe to newsletter</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="terms" name="terms" value="accepted" required>
+                        <label for="terms">I agree to the terms</label>
+                    </p>
+                </form>
+                <h4>Notes:</h4>
+                <p>Boolean choice. checked attribute sets default state. Multiple checkboxes can be selected.</p>
+            </article>
+
+            <article>
+                <h3>19. &lt;input type="radio"&gt; - Radio Button</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="radio" id="small" name="size" value="small"&gt;
+&lt;label for="small"&gt;Small&lt;/label&gt;
+
+&lt;input type="radio" id="medium" name="size" value="medium" checked&gt;
+&lt;label for="medium"&gt;Medium&lt;/label&gt;
+
+&lt;input type="radio" id="large" name="size" value="large"&gt;
+&lt;label for="large"&gt;Large&lt;/label&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <p>
+                        <input type="radio" id="small" name="size" value="small">
+                        <label for="small">Small</label>
+                        
+                        <input type="radio" id="medium" name="size" value="medium" checked>
+                        <label for="medium">Medium</label>
+                        
+                        <input type="radio" id="large" name="size" value="large">
+                        <label for="large">Large</label>
+                    </p>
+                </form>
+                <h4>Notes:</h4>
+                <p>Mutually exclusive choices. Same name groups radio buttons. Only one can be selected per group.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🔘 Button Input Types</h2>
+            
+            <article>
+                <h3>20. &lt;input type="submit"&gt; - Submit Button</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="submit" value="Submit Form"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="submit" value="Submit Form">
+                </form>
+                <h4>Notes:</h4>
+                <p>Submits the form. value attribute sets button text. Default behavior when Enter is pressed in form.</p>
+            </article>
+
+            <article>
+                <h3>21. &lt;input type="reset"&gt; - Reset Button</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="reset" value="Clear Form"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="reset" value="Clear Form">
+                </form>
+                <h4>Notes:</h4>
+                <p>Resets all form fields to default values. Use sparingly - can be frustrating for users.</p>
+            </article>
+
+            <article>
+                <h3>22. &lt;input type="button"&gt; - Generic Button</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="button" value="Click Me" onclick="alert('Button clicked!')"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="button" value="Click Me" onclick="alert('Button clicked!')">
+                </form>
+                <h4>Notes:</h4>
+                <p>Generic button with no default behavior. Requires JavaScript for functionality. Consider &lt;button&gt; element instead.</p>
+            </article>
+
+            <article>
+                <h3>23. &lt;input type="image"&gt; - Image Button</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="image" src="submit-button.png" alt="Submit" width="100" height="30"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjMwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiM0Q0FGNTASCZ8L3JlY3Q+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlN1Ym1pdDwvdGV4dD4KPC9zdmc+" alt="Submit" width="100" height="30">
+                </form>
+                <h4>Notes:</h4>
+                <p>Image that acts as submit button. Sends x,y coordinates of click. alt attribute required for accessibility.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🔒 Hidden Input</h2>
+            
+            <article>
+                <h3>24. &lt;input type="hidden"&gt; - Hidden Field</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="hidden" name="csrf_token" value="abc123xyz"&gt;
+&lt;input type="hidden" name="user_id" value="12345"&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="hidden" name="csrf_token" value="abc123xyz">
+                    <input type="hidden" name="user_id" value="12345">
+                    <p><em>Hidden fields are not visible (but present in form data)</em></p>
+                </form>
+                <h4>Notes:</h4>
+                <p>Not visible to users but included in form submission. Used for tokens, IDs, and other data.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📝 Other Form Elements</h2>
+            
+            <article>
+                <h3>25. &lt;textarea&gt; - Multi-line Text</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;textarea name="message" rows="4" cols="50" placeholder="Enter your message..." maxlength="500"&gt;Default text&lt;/textarea&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <textarea name="message" rows="4" cols="50" placeholder="Enter your message..." maxlength="500">Default text</textarea>
+                </form>
+                <h4>Notes:</h4>
+                <p>Multi-line text input. rows/cols set size, but CSS is preferred. Content goes between opening and closing tags.</p>
+            </article>
+
+            <article>
+                <h3>26. &lt;select&gt; - Dropdown List</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;select name="country" required&gt;
+    &lt;option value=""&gt;Choose a country&lt;/option&gt;
+    &lt;option value="us"&gt;United States&lt;/option&gt;
+    &lt;option value="ca" selected&gt;Canada&lt;/option&gt;
+    &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <select name="country" required>
+                        <option value="">Choose a country</option>
+                        <option value="us">United States</option>
+                        <option value="ca" selected>Canada</option>
+                        <option value="uk">United Kingdom</option>
+                    </select>
+                </form>
+                <h4>Notes:</h4>
+                <p>Dropdown selection. selected attribute sets default. Empty value option useful for validation.</p>
+            </article>
+
+            <article>
+                <h3>27. &lt;option&gt; - Select Option</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;option value="value1" selected disabled&gt;Option text&lt;/option&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>See usage in &lt;select&gt; example above.</p>
+                <h4>Notes:</h4>
+                <p>Individual options in select. value sent to server, text shown to user. selected/disabled attributes available.</p>
+            </article>
+
+            <article>
+                <h3>28. &lt;optgroup&gt; - Option Group</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;select name="food"&gt;
+    &lt;optgroup label="Fruits"&gt;
+        &lt;option value="apple"&gt;Apple&lt;/option&gt;
+        &lt;option value="banana"&gt;Banana&lt;/option&gt;
+    &lt;/optgroup&gt;
+    &lt;optgroup label="Vegetables"&gt;
+        &lt;option value="carrot"&gt;Carrot&lt;/option&gt;
+        &lt;option value="broccoli"&gt;Broccoli&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <select name="food">
+                        <optgroup label="Fruits">
+                            <option value="apple">Apple</option>
+                            <option value="banana">Banana</option>
+                        </optgroup>
+                        <optgroup label="Vegetables">
+                            <option value="carrot">Carrot</option>
+                            <option value="broccoli">Broccoli</option>
+                        </optgroup>
+                    </select>
+                </form>
+                <h4>Notes:</h4>
+                <p>Groups related options in select. label attribute provides group heading. Cannot be selected.</p>
+            </article>
+
+            <article>
+                <h3>29. &lt;datalist&gt; - Data List</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;input type="text" name="browser" list="browsers" placeholder="Choose or type browser"&gt;
+&lt;datalist id="browsers"&gt;
+    &lt;option value="Chrome"&gt;
+    &lt;option value="Firefox"&gt;
+    &lt;option value="Safari"&gt;
+    &lt;option value="Edge"&gt;
+&lt;/datalist&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <input type="text" name="browser" list="browsers" placeholder="Choose or type browser">
+                    <datalist id="browsers">
+                        <option value="Chrome">
+                        <option value="Firefox">
+                        <option value="Safari">
+                        <option value="Edge">
+                    </datalist>
+                </form>
+                <h4>Notes:</h4>
+                <p>Provides autocomplete suggestions for input. Users can type freely or choose from list. HTML5 element.</p>
+            </article>
+
+            <article>
+                <h3>30. &lt;button&gt; - Button Element</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;button type="submit"&gt;Submit Form&lt;/button&gt;
+&lt;button type="reset"&gt;Reset&lt;/button&gt;
+&lt;button type="button" onclick="alert('Clicked!')"&gt;Click Me&lt;/button&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <button type="submit">Submit Form</button>
+                    <button type="reset">Reset</button>
+                    <button type="button" onclick="alert('Clicked!')">Click Me</button>
+                </form>
+                <h4>Notes:</h4>
+                <p>More flexible than input buttons. Can contain HTML content. type: submit (default), reset, or button.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📊 Form Organization</h2>
+            
+            <article>
+                <h3>31. &lt;fieldset&gt; - Field Group</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;Personal Information&lt;/legend&gt;
+    &lt;label for="fname"&gt;First Name:&lt;/label&gt;
+    &lt;input type="text" id="fname" name="fname"&gt;
+    
+    &lt;label for="lname"&gt;Last Name:&lt;/label&gt;
+    &lt;input type="text" id="lname" name="lname"&gt;
+&lt;/fieldset&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <p>
+                            <label for="fname">First Name:</label>
+                            <input type="text" id="fname" name="fname">
+                        </p>
+                        <p>
+                            <label for="lname">Last Name:</label>
+                            <input type="text" id="lname" name="lname">
+                        </p>
+                    </fieldset>
+                </form>
+                <h4>Notes:</h4>
+                <p>Groups related form elements. Creates visual border. Important for accessibility and screen readers.</p>
+            </article>
+
+            <article>
+                <h3>32. &lt;legend&gt; - Fieldset Caption</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;legend&gt;Contact Information&lt;/legend&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>See the "Personal Information" caption in the fieldset example above.</p>
+                <h4>Notes:</h4>
+                <p>Must be first child of &lt;fieldset&gt;. Provides caption for the grouped fields. Important for accessibility.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📈 Progress and Output</h2>
+            
+            <article>
+                <h3>33. &lt;progress&gt; - Progress Bar</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;progress value="70" max="100"&gt;70%&lt;/progress&gt;
+&lt;progress&gt;Loading...&lt;/progress&gt; &lt;!-- Indeterminate --&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <p>
+                        <label>Download progress:</label>
+                        <progress value="70" max="100">70%</progress> 70%
+                    </p>
+                    <p>
+                        <label>Loading:</label>
+                        <progress>Loading...</progress>
+                    </p>
+                </form>
+                <h4>Notes:</h4>
+                <p>Shows completion progress. value/max for determinate, no value for indeterminate (loading animation).</p>
+            </article>
+
+            <article>
+                <h3>34. &lt;meter&gt; - Gauge/Meter</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;meter value="6" min="0" max="10"&gt;6 out of 10&lt;/meter&gt;
+&lt;meter value="0.6"&gt;60%&lt;/meter&gt;</code></pre>
+                <h4>Output:</h4>
+                <form>
+                    <p>
+                        <label>Rating:</label>
+                        <meter value="6" min="0" max="10">6 out of 10</meter> 6/10
+                    </p>
+                    <p>
+                        <label>Battery:</label>
+                        <meter value="0.6">60%</meter> 60%
+                    </p>
+                </form>
+                <h4>Notes:</h4>
+                <p>For scalar measurements within known range. Not for progress - use &lt;progress&gt; instead.</p>
+            </article>
+
+            <article>
+                <h3>35. &lt;output&gt; - Output Element</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
+    &lt;input type="range" id="a" value="50"&gt; +
+    &lt;input type="number" id="b" value="25"&gt; =
+    &lt;output name="result" for="a b"&gt;75&lt;/output&gt;
+&lt;/form&gt;</code></pre>
+                <h4>Output:</h4>
+                <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                    <input type="range" id="a" value="50"> +
+                    <input type="number" id="b" value="25"> =
+                    <output name="result" for="a b">75</output>
+                </form>
+                <h4>Notes:</h4>
+                <p>Displays calculation results. for attribute lists related input IDs. Updated via JavaScript.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📋 Complete Form Example</h2>
+            
+            <article>
+                <h3>Registration Form with All Elements</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;form action="/register" method="post" enctype="multipart/form-data"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Account Information&lt;/legend&gt;
+        
+        &lt;label for="username"&gt;Username:&lt;/label&gt;
+        &lt;input type="text" id="username" name="username" required minlength="3"&gt;
+        
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" required&gt;
+        
+        &lt;label for="password"&gt;Password:&lt;/label&gt;
+        &lt;input type="password" id="password" name="password" required minlength="8"&gt;
+    &lt;/fieldset&gt;
+    
+    &lt;fieldset&gt;
+        &lt;legend&gt;Personal Details&lt;/legend&gt;
+        
+        &lt;label for="birthdate"&gt;Birth Date:&lt;/label&gt;
+        &lt;input type="date" id="birthdate" name="birthdate"&gt;
+        
+        &lt;label for="country"&gt;Country:&lt;/label&gt;
+        &lt;select id="country" name="country"&gt;
+            &lt;option value=""&gt;Select Country&lt;/option&gt;
+            &lt;option value="us"&gt;United States&lt;/option&gt;
+            &lt;option value="ca"&gt;Canada&lt;/option&gt;
+        &lt;/select&gt;
+        
+        &lt;fieldset&gt;
+            &lt;legend&gt;Gender&lt;/legend&gt;
+            &lt;input type="radio" id="male" name="gender" value="male"&gt;
+            &lt;label for="male"&gt;Male&lt;/label&gt;
+            
+            &lt;input type="radio" id="female" name="gender" value="female"&gt;
+            &lt;label for="female"&gt;Female&lt;/label&gt;
+            
+            &lt;input type="radio" id="other" name="gender" value="other"&gt;
+            &lt;label for="other"&gt;Other&lt;/label&gt;
+        &lt;/fieldset&gt;
+    &lt;/fieldset&gt;
+    
+    &lt;fieldset&gt;
+        &lt;legend&gt;Preferences&lt;/legend&gt;
+        
+        &lt;input type="checkbox" id="newsletter" name="newsletter" value="yes"&gt;
+        &lt;label for="newsletter"&gt;Subscribe to newsletter&lt;/label&gt;
+        
+        &lt;label for="bio"&gt;Bio:&lt;/label&gt;
+        &lt;textarea id="bio" name="bio" rows="4" cols="50"&gt;&lt;/textarea&gt;
+        
+        &lt;label for="avatar"&gt;Profile Picture:&lt;/label&gt;
+        &lt;input type="file" id="avatar" name="avatar" accept="image/*"&gt;
+    &lt;/fieldset&gt;
+    
+    &lt;button type="submit"&gt;Register&lt;/button&gt;
+    &lt;button type="reset"&gt;Clear Form&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                <h4>Output:</h4>
+                <form action="/register" method="post" enctype="multipart/form-data" style="border: 2px solid #ccc; padding: 15px;">
+                    <fieldset>
+                        <legend>Account Information</legend>
+                        
+                        <p>
+                            <label for="reg-username">Username:</label><br>
+                            <input type="text" id="reg-username" name="username" required minlength="3">
+                        </p>
+                        
+                        <p>
+                            <label for="reg-email">Email:</label><br>
+                            <input type="email" id="reg-email" name="email" required>
+                        </p>
+                        
+                        <p>
+                            <label for="reg-password">Password:</label><br>
+                            <input type="password" id="reg-password" name="password" required minlength="8">
+                        </p>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Personal Details</legend>
+                        
+                        <p>
+                            <label for="reg-birthdate">Birth Date:</label><br>
+                            <input type="date" id="reg-birthdate" name="birthdate">
+                        </p>
+                        
+                        <p>
+                            <label for="reg-country">Country:</label><br>
+                            <select id="reg-country" name="country">
+                                <option value="">Select Country</option>
+                                <option value="us">United States</option>
+                                <option value="ca">Canada</option>
+                            </select>
+                        </p>
+                        
+                        <fieldset>
+                            <legend>Gender</legend>
+                            <input type="radio" id="reg-male" name="gender" value="male">
+                            <label for="reg-male">Male</label>
+                            
+                            <input type="radio" id="reg-female" name="gender" value="female">
+                            <label for="reg-female">Female</label>
+                            
+                            <input type="radio" id="reg-other" name="gender" value="other">
+                            <label for="reg-other">Other</label>
+                        </fieldset>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Preferences</legend>
+                        
+                        <p>
+                            <input type="checkbox" id="reg-newsletter" name="newsletter" value="yes">
+                            <label for="reg-newsletter">Subscribe to newsletter</label>
+                        </p>
+                        
+                        <p>
+                            <label for="reg-bio">Bio:</label><br>
+                            <textarea id="reg-bio" name="bio" rows="4" cols="50"></textarea>
+                        </p>
+                        
+                        <p>
+                            <label for="reg-avatar">Profile Picture:</label><br>
+                            <input type="file" id="reg-avatar" name="avatar" accept="image/*">
+                        </p>
+                    </fieldset>
+                    
+                    <p>
+                        <button type="submit">Register</button>
+                        <button type="reset">Clear Form</button>
+                    </p>
+                </form>
+                <h4>Notes:</h4>
+                <p>Complete form demonstrating proper structure, validation, accessibility, and all major form elements.</p>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <h2>💡 Form Best Practices</h2>
+        <ul>
+            <li>Always use labels for form controls (for attribute or wrapping)</li>
+            <li>Group related fields with fieldset and legend</li>
+            <li>Use appropriate input types for better UX and validation</li>
+            <li>Provide clear placeholder text and validation messages</li>
+            <li>Use required attribute for mandatory fields</li>
+            <li>Test forms with keyboard navigation and screen readers</li>
+            <li>Consider mobile users - appropriate input types show better keyboards</li>
+            <li>Use autocomplete attributes to help users fill forms faster</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <hr>
+        <p><small>&copy; 2024 HTML Educational Website. Forms & Inputs Section.</small></p>
+        <p><a href="tables.html">← Previous: Tables</a> | <a href="extras.html">Next: Deprecated & Miscellaneous →</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn HTML Head Elements - DOCTYPE, meta tags, links, and document structure">
+    <meta name="keywords" content="HTML head, meta tags, DOCTYPE, title, base, link">
+    <meta name="author" content="HTML Education Team">
+    <base href="C:\Users\04pnk\Downloads\html\">
+    <title>HTML Head Elements - Educational Website</title>
+</head>
+<body>
+    <header>
+        <h1>🧠 HTML Head Elements</h1>
+        <p>Learn about document metadata and head section elements</p>
+    </header>
+
+    <nav>
+        <h2>📚 Navigation Menu</h2>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="head.html">🧠 Head Elements</a></li>
+            <li><a href="text.html">📝 Text & Formatting</a></li>
+            <li><a href="lists.html">📋 Lists</a></li>
+            <li><a href="media.html">🔗 Links & Media</a></li>
+            <li><a href="semantic.html">🏗️ Semantic Structure</a></li>
+            <li><a href="tables.html">📊 Tables</a></li>
+            <li><a href="forms.html">📝 Forms & Inputs</a></li>
+            <li><a href="extras.html">🔧 Deprecated & Miscellaneous</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>1. &lt;!DOCTYPE&gt; Declaration</h2>
+            <h3>Syntax:</h3>
+            <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+            <h3>Output:</h3>
+            <p>This declaration tells the browser this is an HTML5 document (already applied to this page)</p>
+            <h3>Notes:</h3>
+            <p>Must be the very first line in an HTML document. HTML5 simplified this from complex SGML declarations.</p>
+        </section>
+
+        <section>
+            <h2>2. &lt;html&gt; Element</h2>
+            <h3>Syntax:</h3>
+            <pre><code>&lt;html lang="en"&gt;
+    &lt;!-- All page content goes here --&gt;
+&lt;/html&gt;</code></pre>
+            <h3>Output:</h3>
+            <p>Root element containing all page content (wraps this entire page)</p>
+            <h3>Notes:</h3>
+            <p>The <code>lang</code> attribute helps screen readers and search engines understand the page language.</p>
+        </section>
+
+        <section>
+            <h2>3. &lt;head&gt; Element</h2>
+            <h3>Syntax:</h3>
+            <pre><code>&lt;head&gt;
+    &lt;!-- Metadata goes here --&gt;
+&lt;/head&gt;</code></pre>
+            <h3>Output:</h3>
+            <p>Contains metadata not displayed on the page (like the head section of this page)</p>
+            <h3>Notes:</h3>
+            <p>Everything in the head is for browsers, search engines, and other tools - not visible to users.</p>
+        </section>
+
+        <section>
+            <h2>4. &lt;title&gt; Element</h2>
+            <h3>Syntax:</h3>
+            <pre><code>&lt;title&gt;HTML Head Elements - Educational Website&lt;/title&gt;</code></pre>
+            <h3>Output:</h3>
+            <p>Check your browser tab - that's the title in action!</p>
+            <h3>Notes:</h3>
+            <p>Appears in browser tabs, bookmarks, and search engine results. Should be descriptive and unique.</p>
+        </section>
+
+        <section>
+            <h2>5. &lt;meta&gt; Elements</h2>
+            
+            <article>
+                <h3>Character Set</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>Enables proper display of special characters: é, ñ, 中文, العربية, 🌟</p>
+                <h4>Notes:</h4>
+                <p>UTF-8 supports all Unicode characters. Should be first meta tag.</p>
+            </article>
+
+            <article>
+                <h3>Viewport</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>Makes this page responsive on mobile devices</p>
+                <h4>Notes:</h4>
+                <p>Essential for responsive design. Controls how page scales on different devices.</p>
+            </article>
+
+            <article>
+                <h3>Description</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;meta name="description" content="Learn HTML Head Elements"&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>Appears in search engine results (not visible on page)</p>
+                <h4>Notes:</h4>
+                <p>Should be 150-160 characters. Influences search engine rankings.</p>
+            </article>
+
+            <article>
+                <h3>Keywords</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;meta name="keywords" content="HTML, head, meta, tags"&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>Not visible to users (mostly ignored by modern search engines)</p>
+                <h4>Notes:</h4>
+                <p>Largely deprecated for SEO but still used by some internal search systems.</p>
+            </article>
+
+            <article>
+                <h3>Author</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;meta name="author" content="HTML Education Team"&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>Specifies the page author (not visible to users)</p>
+                <h4>Notes:</h4>
+                <p>Useful for content management and attribution.</p>
+            </article>
+
+            <article>
+                <h3>Refresh</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;meta http-equiv="refresh" content="30"&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>Would refresh this page every 30 seconds (not applied here for usability)</p>
+                <h4>Notes:</h4>
+                <p>Can redirect to another page: <code>content="5;url=https://example.com"</code></p>
+            </article>
+        </section>
+
+        <section>
+            <h2>6. &lt;base&gt; Element</h2>
+            <h3>Syntax:</h3>
+            <pre><code>&lt;base href="https://example.com/" target="_blank"&gt;</code></pre>
+            <h3>Output:</h3>
+            <p>Sets default URL and target for all relative links on the page</p>
+            <h3>Notes:</h3>
+            <p>Only one base element allowed per document. Affects all relative URLs.</p>
+        </section>
+
+        <section>
+            <h2>7. &lt;link&gt; Element</h2>
+            <h3>Syntax:</h3>
+            <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;link rel="icon" href="favicon.ico"&gt;
+&lt;link rel="canonical" href="https://example.com/page"&gt;</code></pre>
+            <h3>Output:</h3>
+            <p>Links external resources (CSS files, icons, etc.) - not visible but affects page appearance</p>
+            <h3>Notes:</h3>
+            <p>Self-closing tag. Common rel values: stylesheet, icon, canonical, preload, prefetch.</p>
+        </section>
+
+        <section>
+            <h2>8. &lt;style&gt; Element</h2>
+            <h3>Syntax:</h3>
+            <pre><code>&lt;style&gt;
+    body { font-family: Arial; }
+    h1 { color: blue; }
+&lt;/style&gt;</code></pre>
+            <h3>Output:</h3>
+            <p>Contains CSS styles for the page (this page uses no CSS to focus on HTML)</p>
+            <h3>Notes:</h3>
+            <p>Internal CSS. External stylesheets via &lt;link&gt; are generally preferred.</p>
+        </section>
+
+        <section>
+            <h2>9. &lt;script&gt; Element</h2>
+            <h3>Syntax:</h3>
+            <pre><code>&lt;script&gt;
+    console.log("Hello World!");
+&lt;/script&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+            <h3>Output:</h3>
+            <p>Executes JavaScript code (check browser console for "Hello World!" message)</p>
+            <script>console.log("Hello World from head.html!");</script>
+            <h3>Notes:</h3>
+            <p>Can contain inline code or link external files. Placement affects when code runs.</p>
+        </section>
+
+        <section>
+            <h2>10. &lt;noscript&gt; Element</h2>
+            <h3>Syntax:</h3>
+            <pre><code>&lt;noscript&gt;
+    &lt;p&gt;JavaScript is disabled in your browser.&lt;/p&gt;
+&lt;/noscript&gt;</code></pre>
+            <h3>Output:</h3>
+            <noscript>
+                <p><strong>JavaScript is disabled in your browser.</strong></p>
+            </noscript>
+            <p>(If you see a message above, JavaScript is disabled)</p>
+            <h3>Notes:</h3>
+            <p>Content only displays when JavaScript is disabled or unavailable.</p>
+        </section>
+    </main>
+
+    <aside>
+        <h2>💡 Head Elements Best Practices</h2>
+        <ul>
+            <li>Always include charset meta tag first</li>
+            <li>Use viewport meta for responsive design</li>
+            <li>Write descriptive, unique titles</li>
+            <li>Keep descriptions under 160 characters</li>
+            <li>Use semantic and descriptive meta information</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <hr>
+        <p><small>&copy; 2024 HTML Educational Website. Head Elements Section.</small></p>
+        <p><a href="index.html">← Back to Home</a> | <a href="text.html">Next: Text & Formatting →</a></p>
+    </footer>
+</body>
+</html>

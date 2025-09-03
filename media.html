@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn HTML Links and Media Elements - hyperlinks, images, audio, video, and embedded content">
+    <meta name="keywords" content="HTML links, media, images, audio, video, embed, iframe">
+    <meta name="author" content="HTML Education Team">
+    <title>HTML Links & Media - Educational Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzQyODVGNCIvPgo8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5IPC90ZXh0Pgo8L3N2Zz4K">
+</head>
+<body>
+    <header class="main-header">
+        <h1>🔗 HTML Links & Media Elements</h1>
+        <p>Master hyperlinks, images, audio, video, and embedded content</p>
+    </header>
+
+    <nav class="main-nav">
+        <h2>📚 Navigation Menu</h2>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="head.html">🧠 Head Elements</a></li>
+            <li><a href="text.html">📝 Text & Formatting</a></li>
+            <li><a href="lists.html">📋 Lists</a></li>
+            <li><a href="media.html" class="active">🔗 Links & Media</a></li>
+            <li><a href="semantic.html">🏗️ Semantic Structure</a></li>
+            <li><a href="tables.html">📊 Tables</a></li>
+            <li><a href="forms.html">📝 Forms & Inputs</a></li>
+            <li><a href="icons.html">🎨 Icons & Favicons</a></li>
+            <li><a href="extras.html">🔧 Deprecated & Miscellaneous</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <main class="content-area">
+        <section>
+            <h2>🔗 Hyperlinks</h2>
+            
+            <article>
+                <h3>1. &lt;a&gt; - Anchor/Link</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;a href="https://www.example.com"&gt;External Link&lt;/a&gt;
+&lt;a href="index.html"&gt;Internal Link&lt;/a&gt;
+&lt;a href="mailto:test@example.com"&gt;Email Link&lt;/a&gt;
+&lt;a href="tel:+1234567890"&gt;Phone Link&lt;/a&gt;
+&lt;a href="#section1"&gt;Anchor Link&lt;/a&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><a href="https://www.example.com">External Link</a></p>
+                <p><a href="index.html">Internal Link</a></p>
+                <p><a href="mailto:test@example.com">Email Link</a></p>
+                <p><a href="tel:+1234567890">Phone Link</a></p>
+                <p><a href="#section1">Anchor Link</a></p>
+                <h4>Notes:</h4>
+                <p>The foundation of web navigation. href attribute specifies destination. Can link to URLs, files, email, phone, or page sections.</p>
+            </article>
+
+            <article>
+                <h3>Link with Target Attribute</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;a href="https://www.example.com" target="_blank"&gt;Open in New Tab&lt;/a&gt;
+&lt;a href="https://www.example.com" target="_self"&gt;Open in Same Tab&lt;/a&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><a href="https://www.example.com" target="_blank">Open in New Tab</a></p>
+                <p><a href="https://www.example.com" target="_self">Open in Same Tab</a></p>
+                <h4>Notes:</h4>
+                <p>target="_blank" opens in new tab/window. For security, add rel="noopener noreferrer" with target="_blank".</p>
+            </article>
+
+            <article>
+                <h3>Link with Download Attribute</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;a href="document.pdf" download&gt;Download PDF&lt;/a&gt;
+&lt;a href="image.jpg" download="my-image.jpg"&gt;Download Image&lt;/a&gt;</code></pre>
+                <h4>Output:</h4>
+                <p><a href="#" download>Download PDF</a> (simulated - no actual file)</p>
+                <p><a href="#" download="my-image.jpg">Download Image</a> (simulated - no actual file)</p>
+                <h4>Notes:</h4>
+                <p>Forces download instead of navigation. Optional filename can be specified.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🖼️ Images</h2>
+            
+            <article>
+                <h3>2. &lt;img&gt; - Image</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;img src="image.jpg" alt="Description of image" width="300" height="200"&gt;</code></pre>
+                <h4>Output:</h4>
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIFBsYWNlaG9sZGVyPC90ZXh0Pgo8L3N2Zz4=" alt="Description of image" width="300" height="200">
+                <h4>Notes:</h4>
+                <p>Self-closing tag. alt attribute is required for accessibility. width/height can be set via attributes or CSS.</p>
+            </article>
+
+            <article>
+                <h3>Responsive Image with srcset</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;img src="small.jpg" 
+     srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1200w"
+     sizes="(max-width: 480px) 100vw, (max-width: 800px) 50vw, 25vw"
+     alt="Responsive image"&gt;</code></pre>
+                <h4>Output:</h4>
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlJlc3BvbnNpdmUgSW1hZ2U8L3RleHQ+Cjwvc3ZnPg==" alt="Responsive image" width="300" height="200">
+                <h4>Notes:</h4>
+                <p>srcset provides multiple image sources for different screen sizes. Browser chooses best option.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🖼️ Advanced Image Elements</h2>
+            
+            <article>
+                <h3>3. &lt;picture&gt; - Picture Container</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;picture&gt;
+    &lt;source media="(min-width: 800px)" srcset="large.jpg"&gt;
+    &lt;source media="(min-width: 400px)" srcset="medium.jpg"&gt;
+    &lt;img src="small.jpg" alt="Responsive picture"&gt;
+&lt;/picture&gt;</code></pre>
+                <h4>Output:</h4>
+                <picture>
+                    <source media="(min-width: 800px)" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxhcmdlIEltYWdlPC90ZXh0Pgo8L3N2Zz4=">
+                    <source media="(min-width: 400px)" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk1lZGl1bSBJbWFnZTwvdGV4dD4KPC9zdmc+">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlNtYWxsIEltYWdlPC90ZXh0Pgo8L3N2Zz4=" alt="Responsive picture" width="300" height="200">
+                </picture>
+                <h4>Notes:</h4>
+                <p>More control than img srcset. Can serve different image formats or art direction. img is fallback.</p>
+            </article>
+
+            <article>
+                <h3>4. &lt;source&gt; - Media Source</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;source media="(min-width: 800px)" srcset="large.webp" type="image/webp"&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>See usage in &lt;picture&gt; and &lt;audio&gt;/&lt;video&gt; examples.</p>
+                <h4>Notes:</h4>
+                <p>Specifies media resources for &lt;picture&gt;, &lt;audio&gt;, and &lt;video&gt;. Self-closing tag.</p>
+            </article>
+
+            <article>
+                <h3>5. &lt;figure&gt; - Figure Container</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;figure&gt;
+    &lt;img src="chart.jpg" alt="Sales chart"&gt;
+    &lt;figcaption&gt;Q4 Sales Performance Chart&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+                <h4>Output:</h4>
+                <figure>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlNhbGVzIENoYXJ0PC90ZXh0Pgo8L3N2Zz4=" alt="Sales chart" width="300" height="200">
+                    <figcaption>Q4 Sales Performance Chart</figcaption>
+                </figure>
+                <h4>Notes:</h4>
+                <p>Semantic container for images, diagrams, code snippets, etc. with optional caption.</p>
+            </article>
+
+            <article>
+                <h3>6. &lt;figcaption&gt; - Figure Caption</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;figcaption&gt;Caption text for the figure&lt;/figcaption&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>See the caption in the figure example above.</p>
+                <h4>Notes:</h4>
+                <p>Must be first or last child of &lt;figure&gt;. Provides accessible description of figure content.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🎵 Audio Elements</h2>
+            
+            <article>
+                <h3>7. &lt;audio&gt; - Audio Player</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    &lt;source src="audio.ogg" type="audio/ogg"&gt;
+    Your browser does not support audio.
+&lt;/audio&gt;</code></pre>
+                <h4>Output:</h4>
+                <audio controls>
+                    <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav">
+                    Your browser does not support audio.
+                </audio>
+                <h4>Notes:</h4>
+                <p>controls attribute shows play/pause buttons. Multiple sources for browser compatibility. Fallback text for unsupported browsers.</p>
+            </article>
+
+            <article>
+                <h3>Audio with Attributes</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;audio controls autoplay loop muted preload="auto"&gt;
+    &lt;source src="background.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+                <h4>Output:</h4>
+                <audio controls muted preload="auto">
+                    <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav">
+                </audio>
+                <h4>Notes:</h4>
+                <p>autoplay (use carefully), loop (repeats), muted (starts muted), preload (none/metadata/auto).</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🎬 Video Elements</h2>
+            
+            <article>
+                <h3>8. &lt;video&gt; - Video Player</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;video controls width="400" height="300"&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    &lt;source src="movie.webm" type="video/webm"&gt;
+    Your browser does not support video.
+&lt;/video&gt;</code></pre>
+                <h4>Output:</h4>
+                <video controls width="400" height="300">
+                    <source src="data:video/mp4;base64,AAAAIGZ0eXBpc29tAAACAGlzb21pc28yYXZjMW1wNDEAAAAIZnJlZQAAAr1tZGF0AAACrgYF//+q3EXpvebZSLeWLNgg2SPu73gyNjQgLSBjb3JlIDE1MiByMjg1NCBlOWE1OTAzIC0gSC4yNjQvTVBFRy00IEFWQyBjb2RlYyAtIENvcHlsZWZ0IDIwMDMtMjAxNyAtIGh0dHA6Ly93d3cudmlkZW9sYW4ub3JnL3gyNjQuaHRtbCAtIG9wdGlvbnM6IGNhYmFjPTEgcmVmPTMgZGVibG9jaz0xOjA6MCBhbmFseXNlPTB4MzoweDExMyBtZT1oZXggc3VibWU9NyBwc3k9MSBwc3lfcmQ9MS4wMDowLjAwIG1peGVkX3JlZj0xIG1lX3JhbmdlPTE2IGNocm9tYV9tZT0xIHRyZWxsaXM9MSA4eDhkY3Q9MSBjcW09MCBkZWFkem9uZT0yMSwxMSBmYXN0X3Bza2lwPTEgY2hyb21hX3FwX29mZnNldD0tMiB0aHJlYWRzPTMgbG9va2FoZWFkX3RocmVhZHM9MSBzbGljZWRfdGhyZWFkcz0wIG5yPTAgZGVjaW1hdGU9MSBpbnRlcmxhY2VkPTAgYmx1cmF5X2NvbXBhdD0wIGNvbnN0cmFpbmVkX2ludHJhPTAgYmZyYW1lcz0zIGJfcHlyYW1pZD0yIGJfYWRhcHQ9MSBiX2JpYXM9MCBkaXJlY3Q9MSB3ZWlnaHRiPTEgb3Blbl9nb3A9MCB3ZWlnaHRwPTIga2V5aW50PTI1MCBrZXlpbnRfbWluPTEwIHNjZW5lY3V0PTQwIGludHJhX3JlZnJlc2g9MCByY19sb29rYWhlYWQ9NDAgcmM9Y3JmIG1idHJlZT0xIGNyZj0yMy4wIHFjb21wPTAuNjAgcXBtaW49MCBxcG1heD02OSBxcHN0ZXA9NCBpcF9yYXRpbz0xLjQwIGFxPTE6MS4wMACAAAAAD2WIhAA3//728P4FNjuY0EA=" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+                <h4>Notes:</h4>
+                <p>Similar to audio but for video content. width/height set dimensions. Multiple formats for compatibility.</p>
+            </article>
+
+            <article>
+                <h3>Video with Poster</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;video controls width="400" height="300" poster="thumbnail.jpg"&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+                <h4>Output:</h4>
+                <video controls width="400" height="300" poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPuKWtjwvdGV4dD4KPC9zdmc+">
+                    <source src="data:video/mp4;base64,AAAAIGZ0eXBpc29tAAACAGlzb21pc28yYXZjMW1wNDEAAAAIZnJlZQAAAr1tZGF0AAACrgYF//+q3EXpvebZSLeWLNgg2SPu73gyNjQgLSBjb3JlIDE1MiByMjg1NCBlOWE1OTAzIC0gSC4yNjQvTVBFRy00IEFWQyBjb2RlYyAtIENvcHlsZWZ0IDIwMDMtMjAxNyAtIGh0dHA6Ly93d3cudmlkZW9sYW4ub3JnL3gyNjQuaHRtbCAtIG9wdGlvbnM6IGNhYmFjPTEgcmVmPTMgZGVibG9jaz0xOjA6MCBhbmFseXNlPTB4MzoweDExMyBtZT1oZXggc3VibWU9NyBwc3k9MSBwc3lfcmQ9MS4wMDowLjAwIG1peGVkX3JlZj0xIG1lX3JhbmdlPTE2IGNocm9tYV9tZT0xIHRyZWxsaXM9MSA4eDhkY3Q9MSBjcW09MCBkZWFkem9uZT0yMSwxMSBmYXN0X3Bza2lwPTEgY2hyb21hX3FwX29mZnNldD0tMiB0aHJlYWRzPTMgbG9va2FoZWFkX3RocmVhZHM9MSBzbGljZWRfdGhyZWFkcz0wIG5yPTAgZGVjaW1hdGU9MSBpbnRlcmxhY2VkPTAgYmx1cmF5X2NvbXBhdD0wIGNvbnN0cmFpbmVkX2ludHJhPTAgYmZyYW1lcz0zIGJfcHlyYW1pZD0yIGJfYWRhcHQ9MSBiX2JpYXM9MCBkaXJlY3Q9MSB3ZWlnaHRiPTEgb3Blbl9nb3A9MCB3ZWlnaHRwPTIga2V5aW50PTI1MCBrZXlpbnRfbWluPTEwIHNjZW5lY3V0PTQwIGludHJhX3JlZnJlc2g9MCByY19sb29rYWhlYWQ9NDAgcmM9Y3JmIG1idHJlZT0xIGNyZj0yMy4wIHFjb21wPTAuNjAgcXBtaW49MCBxcG1heD02OSBxcHN0ZXA9NCBpcF9yYXRpbz0xLjQwIGFxPTE6MS4wMACAAAAAD2WIhAA3//728P4FNjuY0EA=" type="video/mp4">
+                </video>
+                <h4>Notes:</h4>
+                <p>poster attribute shows image before video plays. Good for user experience and loading indication.</p>
+            </article>
+
+            <article>
+                <h3>9. &lt;track&gt; - Text Track</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;video controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    &lt;track kind="subtitles" src="subtitles.vtt" srclang="en" label="English"&gt;
+    &lt;track kind="captions" src="captions.vtt" srclang="en" label="English Captions"&gt;
+&lt;/video&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>Text tracks provide subtitles, captions, descriptions, etc. for video/audio content.</p>
+                <h4>Notes:</h4>
+                <p>Self-closing tag. kind: subtitles, captions, descriptions, chapters, metadata. Uses WebVTT format.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🔌 Embedded Content</h2>
+            
+            <article>
+                <h3>10. &lt;embed&gt; - Embedded Content</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;embed src="document.pdf" type="application/pdf" width="600" height="400"&gt;</code></pre>
+                <h4>Output:</h4>
+                <embed src="data:text/plain;base64,VGhpcyBpcyBhIHNpbXVsYXRlZCBlbWJlZGRlZCBjb250ZW50IGV4YW1wbGUu" type="text/plain" width="400" height="100">
+                <h4>Notes:</h4>
+                <p>Self-closing tag. For external applications, plugins, or media. Use sparingly - prefer specific elements like &lt;video&gt;, &lt;audio&gt;.</p>
+            </article>
+
+            <article>
+                <h3>11. &lt;object&gt; - Generic Object</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;object data="movie.swf" type="application/x-shockwave-flash" width="400" height="300"&gt;
+    &lt;param name="movie" value="movie.swf"&gt;
+    &lt;p&gt;Flash content not supported.&lt;/p&gt;
+&lt;/object&gt;</code></pre>
+                <h4>Output:</h4>
+                <object data="data:text/plain;base64,VGhpcyBpcyBhIHNpbXVsYXRlZCBvYmplY3QgZXhhbXBsZS4=" type="text/plain" width="400" height="100">
+                    <p>Object content not supported.</p>
+                </object>
+                <h4>Notes:</h4>
+                <p>More flexible than &lt;embed&gt;. Can contain fallback content and parameters. Often used for Flash (now deprecated).</p>
+            </article>
+
+            <article>
+                <h3>12. &lt;param&gt; - Object Parameter</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;param name="autoplay" value="true"&gt;
+&lt;param name="loop" value="false"&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>See usage in &lt;object&gt; example above.</p>
+                <h4>Notes:</h4>
+                <p>Self-closing tag. Defines parameters for &lt;object&gt; elements. Name-value pairs for configuration.</p>
+            </article>
+
+            <article>
+                <h3>13. &lt;iframe&gt; - Inline Frame</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;iframe src="https://www.example.com" width="600" height="400" title="Example Website"&gt;
+    &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
+&lt;/iframe&gt;</code></pre>
+                <h4>Output:</h4>
+                <iframe src="data:text/html;base64,PCFET0NUWVBFIGh0bWw+PGh0bWw+PGhlYWQ+PHRpdGxlPkV4YW1wbGU8L3RpdGxlPjwvaGVhZD48Ym9keT48aDE+RXhhbXBsZSBJZnJhbWUgQ29udGVudDwvaDE+PHA+VGhpcyBpcyBzaW11bGF0ZWQgaWZyYW1lIGNvbnRlbnQuPC9wPjwvYm9keT48L2h0bWw+" width="400" height="200" title="Example Website">
+                    <p>Your browser does not support iframes.</p>
+                </iframe>
+                <h4>Notes:</h4>
+                <p>Embeds another HTML document. Security considerations with sandbox attribute. title required for accessibility.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🗺️ Image Maps</h2>
+            
+            <article>
+                <h3>14. &lt;map&gt; - Image Map</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;img src="planets.jpg" alt="Planets" usemap="#planetmap"&gt;
+&lt;map name="planetmap"&gt;
+    &lt;area shape="circle" coords="90,58,3" href="mercury.html" alt="Mercury"&gt;
+    &lt;area shape="circle" coords="124,58,8" href="venus.html" alt="Venus"&gt;
+&lt;/map&gt;</code></pre>
+                <h4>Output:</h4>
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDAxMTMzIi8+CiAgPGNpcmNsZSBjeD0iNjAiIGN5PSI1MCIgcj0iOCIgZmlsbD0iI0ZGRkZGRiIvPgogIDxjaXJjbGUgY3g9IjEyMCIgY3k9IjgwIiByPSIxMiIgZmlsbD0iI0ZGQzY0OSIvPgogIDxjaXJjbGUgY3g9IjE4MCIgY3k9IjEyMCIgcj0iMTAiIGZpbGw9IiM2Qjk0RkYiLz4KICA8dGV4dCB4PSI1MCUiIHk9IjkwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5DbGljayBvbiBQbGFuZXRzPC90ZXh0Pgo8L3N2Zz4=" alt="Planets" usemap="#planetmap" width="300" height="200">
+                <map name="planetmap">
+                    <area shape="circle" coords="60,50,8" href="#" alt="Mercury">
+                    <area shape="circle" coords="120,80,12" href="#" alt="Venus">
+                    <area shape="circle" coords="180,120,10" href="#" alt="Earth">
+                </map>
+                <h4>Notes:</h4>
+                <p>Creates clickable areas on images. name attribute matches usemap on img. Rarely used in modern web design.</p>
+            </article>
+
+            <article>
+                <h3>15. &lt;area&gt; - Image Map Area</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;area shape="rect" coords="0,0,100,100" href="link.html" alt="Rectangle area"&gt;
+&lt;area shape="circle" coords="50,50,25" href="link.html" alt="Circle area"&gt;
+&lt;area shape="poly" coords="0,0,50,25,0,50" href="link.html" alt="Polygon area"&gt;</code></pre>
+                <h4>Output:</h4>
+                <p>See usage in &lt;map&gt; example above.</p>
+                <h4>Notes:</h4>
+                <p>Self-closing tag. Shapes: rect, circle, poly, default. Coordinates depend on shape type.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>🎨 Graphics Elements</h2>
+            
+            <article>
+                <h3>16. &lt;canvas&gt; - Drawing Canvas</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;canvas id="myCanvas" width="300" height="200"&gt;
+    Your browser does not support canvas.
+&lt;/canvas&gt;</code></pre>
+                <h4>Output:</h4>
+                <canvas id="myCanvas" width="300" height="200" style="border: 1px solid #ccc;">
+                    Your browser does not support canvas.
+                </canvas>
+                <script>
+                    const canvas = document.getElementById('myCanvas');
+                    const ctx = canvas.getContext('2d');
+                    ctx.fillStyle = '#4CAF50';
+                    ctx.fillRect(10, 10, 100, 50);
+                    ctx.fillStyle = '#2196F3';
+                    ctx.beginPath();
+                    ctx.arc(200, 100, 40, 0, 2 * Math.PI);
+                    ctx.fill();
+                    ctx.fillStyle = '#000';
+                    ctx.font = '16px Arial';
+                    ctx.fillText('Canvas Example', 50, 150);
+                </script>
+                <h4>Notes:</h4>
+                <p>HTML5 element for drawing graphics via JavaScript. Requires scripting to display content.</p>
+            </article>
+
+            <article>
+                <h3>17. &lt;svg&gt; - Scalable Vector Graphics</h3>
+                <h4>Syntax:</h4>
+                <pre><code>&lt;svg width="200" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" fill="red"&gt;&lt;/circle&gt;
+    &lt;rect x="100" y="10" width="80" height="80" fill="blue"&gt;&lt;/rect&gt;
+&lt;/svg&gt;</code></pre>
+                <h4>Output:</h4>
+                <svg width="200" height="100">
+                    <circle cx="50" cy="50" r="40" fill="red"></circle>
+                    <rect x="100" y="10" width="80" height="80" fill="blue"></rect>
+                </svg>
+                <h4>Notes:</h4>
+                <p>Vector graphics format. Scalable, searchable, and styleable with CSS. Can be inline or external file.</p>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <h2>💡 Media Best Practices</h2>
+        <ul>
+            <li>Always provide alt text for images</li>
+            <li>Use multiple source formats for audio/video compatibility</li>
+            <li>Include fallback content for unsupported elements</li>
+            <li>Optimize media file sizes for web delivery</li>
+            <li>Use responsive images with srcset for different screen sizes</li>
+            <li>Be cautious with autoplay - many browsers block it</li>
+            <li>Provide captions and transcripts for accessibility</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <hr>
+        <p><small>&copy; 2024 HTML Educational Website. Links & Media Section.</small></p>
+        <p><a href="lists.html">← Previous: Lists</a> | <a href="semantic.html">Next: Semantic Structure →</a></p>
+    </footer>
+</body>
+</html>
